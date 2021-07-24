@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>몇키낮추지?</title>
+  <style media="screen">
+
+  </style>
+</head>
+
+<body>
+  <div id = "referenceSelect" margin-bottom = "150px">
+  <form onchange = "referenceSelected();">
+    <label for="refname">나는 </label>
+    <select id="refname" name="refname" value="select">
+      <option value="select" hidden>노래를 선택하세요</option>
+      <option value="seosi">서시 - mc the max</option>
+      <option value="timeless">Timeless -	SG워너비</option>
+      <option value="jonni">좋니	- 윤종신</option>
+      <option value="izi">응급실 - izi</option>
+      <option value="soju">소주한잔	- 임창정</option>
+      <option value="bro">형 -	노라조</option>
+    </select>
+    <label for="refdifficulty"> 을 </label>
+    <select id="refdifficulty" name="refdifficulty">
+      <option value="easy">쉽게</option>
+      <option value="normal">조금 힘겹게</option>
+      <option value="hard">간신히</option>
+    </select
+    <label> 부를 수 있어요</label>
+    <!-- <input type="submit"> -->
+  </form>
+  </div>
+
+  <div id = "maxnoteindicate" hidden = true>
+    <p> 그렇다면 당신의 최고음은...</p>
+    <p id = "yourmaxnote">3B♭</p>
+    <p>※주의! 최고음과 노래방기계에서 표시되는 키 (으뜸음) 는 다릅니다! 아래 계산기에서 여러분이 부르고 싶은 노래의 키를 확인하세요.</p>
+  </div>
+
+  <div id = "targetSelect" hidden = true>
+    <form>
+      <select id="targetname" name="targetname" onchange = "targetSongSelected();">
+        <option value="seosi">서시 - mc the max</option>
+        <option value="timeless">Timeless -	SG워너비</option>
+        <option value="jonni">좋니	- 윤종신</option>
+        <option value="izi">응급실 - izi</option>
+        <option value="soju">소주한잔	- 임창정</option>
+        <option value="bro">형 -	노라조</option>
+      </select>
+      <label for="targetdifficulty"> 를 </label>
+      <select id="targetdifficulty" name="targetdifficulty" onchange = "targetSongSelected();">
+        <option value="easy">쉽게</option>
+        <option value="normal">조금 높게</option>
+        <option value="hard">최대한 높게</option>
+      </select
+      <label> 부르려면... </label>
+      <!-- <input type="submit"> -->
+    </form>
+    <br>
+    -3키 (G♭또는 F#)
+    </div>
+
+</body>
+
+<script src = "script.js"></script>
+</html>
