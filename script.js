@@ -1,5 +1,4 @@
 var songlist;
-var songOptions = [];
 var MXNT;
 
 const refsongmenu = document.getElementById("refsong");
@@ -14,18 +13,21 @@ async function initializeSongs() {
     .then(data => songlist = data)
     .catch(err => console.log(err));
 
-  for (let i = 0; i < songlist.length; i++) {
-    songOptions[i] = document.createElement('option');
-    songOptions[i].textContent = songlist[i].name + '-' + songlist[i].artist;
-    songOptions[i].value = i;
-    refsongmenu.appendChild(songOptions[i]);
-    querysongmenu.appendChild(songOptions[i].cloneNode(true));
-  }
+  var songOptions = [];
+  songlist.map(function(song,i){
+      songOptions = document.createElement('option');
+      songOptions.textContent = song.name + '-' + song.artist;
+      songOptions.value = i;
+      refsongmenu.appendChild(songOptions);
+      querysongmenu.appendChild(songOptions.cloneNode(true));
+    }
+  );
 }
 
 function referenceSelected() {
   const maxnoteindicator = document.getElementById("maxnoteindicate");
   const targetselectui = document.getElementById("querySelect");
+  const availSongui = document.getElementById("availableSongs");
   var refsongid = refsongmenu.value;
   var refdifficulty = document.getElementById("refdifficulty").value;
 
@@ -35,16 +37,18 @@ function referenceSelected() {
 
   maxnoteindicator.hidden = false;
   targetselectui.hidden = false;
-  availsonglist.hidden = false;
+  availSongui.hidden = false;
 };
 
+var songDOM = [];
 function updateAvailableSongs(){
+  songDOM.map(dom = >dom.remove());
   songlist.map(
     function(song,i){
       if(MXNT > song.maxnote){
-        var songDOM = document.createElement('li');
-        songDOM.textContent = songlist[i].name + '-' + songlist[i].artist;
-        availsonglist.appendChild(songDOM);
+        songDOM[i] = document.createElement('li');
+        songDOM[i].textContent = songlist[i].name + '-' + songlist[i].artist;
+        availsonglist.appendChild(songDOM[i]);
       }
     }
   );
