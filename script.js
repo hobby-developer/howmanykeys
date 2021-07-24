@@ -36,15 +36,16 @@ function referenceSelected() {
   maxnoteindicator.hidden = false;
   targetselectui.hidden = false;
   availsonglist.hidden = false;
-  querySongSelected();
 };
 
-function availableSongs(){
-  songlist.map(function(song,i){
-    if(MXNT > song.maxnote){
-      var songDOM = document.createElement('li');
-      songDOM.textContent = songlist[i].name + '-' + songlist[i].artist;
-      availsonglist.appendChild(songDOM);
+function updateAvailableSongs(){
+  songlist.map(
+    function(song,i){
+      if(MXNT > song.maxnote){
+        var songDOM = document.createElement('li');
+        songDOM.textContent = songlist[i].name + '-' + songlist[i].artist;
+        availsonglist.appendChild(songDOM);
+      }
     }
   );
 }
