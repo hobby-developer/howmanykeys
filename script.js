@@ -1,12 +1,13 @@
 var songlist;
 var MXNT;
 
-songoptions = initializeSongs();
+initializeSongs().then(function(options){
+  for (let i = 0; i<options.length;i++){
+    refsongmenu.append(options[i]);
+    querysongmenu.append(options[i]);
+  }
+});
 
-for (let i = 0; i<songoptions.length;i++){
-  refsongmenu.append(songoptions[i]);
-  querysongmenu.append(songoptions[i]);
-}
 
 async function initializeSongs() {
   await fetch('./songlist.json')
