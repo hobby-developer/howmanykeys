@@ -1,7 +1,12 @@
 var songlist;
 var MXNT;
 
-initializeSongs();
+songoptions = initializeSongs();
+
+for (let i = 0; i<songoptions.length;i++){
+  refsongmenu.append(songoptions[i]);
+  querysongmenu.append(songoptions[i]);
+}
 
 async function initializeSongs() {
   await fetch('./songlist.json')
@@ -17,8 +22,6 @@ async function initializeSongs() {
     songOptions[i] = document.createElement('option');
     songOptions[i].textContent = songlist[i].name + '-' + songlist[i].artist;
     songOptions[i].value = i;
-    refsongmenu.append(songOptions[i]);
-    querysongmenu.append(songOptions[i]);
   }
 }
 
