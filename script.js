@@ -1,26 +1,30 @@
 var songlist;
-
-await fetch('./songlist.json')
-  .then(response => response.json())
-  .then(data => songlist = data)
-  .catch(err => console.log(err));
-
-const refsongmenu = document.getElementById("refsong");
-const querysongmenu = document.getElementById("querysong");
-
-var refSongOptions;
-var querySongOptions;
-for(i=0; i<songlist.length; i++){
-  refSongOptions[i] = document.createElement('option');
-  refSongOptions[i].textContent = songlist[i].name + '-' + songlist[i].artist;
-  refSongOptions[i].value = i;
-}
-querySongOptions = refSongOptions;
-
-refsongmenu.appendChild(refSongOptions);
-querysongmenu.appendChild(querySongOptions);
-
 var MXNT;
+
+initializeSongs();
+
+async function initializeSongs() {
+  await fetch('./songlist.json')
+    .then(response => response.json())
+    .then(data => songlist = data)
+    .catch(err => console.log(err));
+
+  const refsongmenu = document.getElementById("refsong");
+  const querysongmenu = document.getElementById("querysong");
+
+  var refSongOptions;
+  var querySongOptions;
+  for (i = 0; i < songlist.length; i++) {
+    refSongOptions[i] = document.createElement('option');
+    refSongOptions[i].textContent = songlist[i].name + '-' + songlist[i].artist;
+    refSongOptions[i].value = i;
+  }
+  querySongOptions = refSongOptions;
+
+  refsongmenu.appendChild(refSongOptions);
+  querysongmenu.appendChild(querySongOptions);
+}
+
 function referenceSelected() {
   const maxnoteindicator = document.getElementById("maxnoteindicate");
   const targetselectui = document.getElementById("targetSelect");
