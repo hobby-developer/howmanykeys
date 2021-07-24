@@ -4,14 +4,14 @@
     "artist": "izi",
     "root": 3,
     "maxnote": 10,
-    "maxlyrics" : ["나를 버리지마 그냥 날 ", "안","아줘"];
+    "maxlyrics" : ["나를 버리지마 그냥 날 ", "안","아줘"]
   },
   {
     "name": "서시",
     "artist": "mc the max",
     "root": 2,
     "maxnote": 9,
-    "maxlyrics" : ["내가 항상 여기 서", "있을","게"];
+    "maxlyrics" : ["내가 항상 여기 서", "있을","게"]
   },
   {
     "name": "좋니",
