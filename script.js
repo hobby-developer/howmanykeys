@@ -34,9 +34,9 @@ function referenceSelected() {
   MXNT = refsong.maxnote + difficultyCorrection(refdifficulty);
 
   document.getElementById("yourmaxnote").innerHTML = note2text(MXNT);
-  document.getElementById("refprelyrics").innerHTML = refsong.maxlyrics[1];
-  document.getElementById("refmaxlyrics").innerHTML = refsong.maxlyrics[2];
-  document.getElementById("refpostlyrics").innerHTML = refsong.maxlyrics[3];
+  document.getElementById("refprelyrics").innerHTML = refsong.maxlyrics[0];
+  document.getElementById("refmaxlyrics").innerHTML = refsong.maxlyrics[1];
+  document.getElementById("refpostlyrics").innerHTML = refsong.maxlyrics[2];
 
   maxnoteindicator.hidden = false;
   targetselectui.hidden = false;
@@ -68,9 +68,9 @@ function querySongSelected(){
   [dkey, key] = querynote(querysong,querydifficulty);
 
   document.getElementById("querykey").innerHTML = dkey +'키 (' + note2comptext(key) + ')';
-  document.getElementById("queryprelyrics").innerHTML = querysong.maxlyrics[1];
-  document.getElementById("querymaxlyrics").innerHTML = querysong.maxlyrics[2];
-  document.getElementById("querypostlyrics").innerHTML = querysong.maxlyrics[3];
+  document.getElementById("queryprelyrics").innerHTML = querysong.maxlyrics[0];
+  document.getElementById("querymaxlyrics").innerHTML = querysong.maxlyrics[1];
+  document.getElementById("querypostlyrics").innerHTML = querysong.maxlyrics[2];
 }
 
 
