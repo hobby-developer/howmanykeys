@@ -1,9 +1,19 @@
 var songlist;
 
+/*
+
 getJSONP('https://hobby-developer.github.io/howmanykeys/songlist.json',
 function(data){
   songlist = data;
 });
+
+*/
+
+
+fetch('./Data.json')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(err => console.log(error));
 
 var MXNT;
 function referenceSelected() {
