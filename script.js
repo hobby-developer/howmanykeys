@@ -1,8 +1,10 @@
 var songlist;
+var songOptions = [];
 var MXNT;
 
 const refsongmenu = document.getElementById("refsong");
 const querysongmenu = document.getElementById("querysong");
+const availsonglist = document.getElementById("availableSongList");
 
 initializeSongs()
 
@@ -12,15 +14,13 @@ async function initializeSongs() {
     .then(data => songlist = data)
     .catch(err => console.log(err));
 
-  var songOptions = [];
   for (let i = 0; i < songlist.length; i++) {
     songOptions[i] = document.createElement('option');
     songOptions[i].textContent = songlist[i].name + '-' + songlist[i].artist;
     songOptions[i].value = i;
-    refsongmenu.append(songOptions[i]);
-    querysongmenu.append(songOptions[i].cloneNode(true));
+    refsongmenu.appendChild(songOptions[i]);
+    querysongmenu.appendChild(songOptions[i].cloneNode(true));
   }
-  return songOptions;
 }
 
 function referenceSelected() {
@@ -35,8 +35,19 @@ function referenceSelected() {
 
   maxnoteindicator.hidden = false;
   targetselectui.hidden = false;
+  availsonglist.hidden = false;
   querySongSelected();
 };
+
+function availableSongs(){
+  songlist.map(function(song,i){
+    if(MXNT > song.maxnote){
+      var songDOM = document.createElement('li');
+      songDOM.textContent = songlist[i].name + '-' + songlist[i].artist;
+      availsonglist.appendChild(songDOM);
+    }
+  );
+}
 
 function querySongSelected(){
   var querysongid = querysongmenu.value;
