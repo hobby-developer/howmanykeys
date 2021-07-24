@@ -76,7 +76,8 @@ function querySongSelected(){
 
 function querynote(song,difficulty){
   mxnt = MXNT - difficultyCorrection(difficulty);
-  return [mxnt - song.maxnote, mxnt - song.root];
+  dkey = mxnt - song.maxnote;
+  return [dkey, song.root - dkey];
 }
 
 function difficultyCorrection(difficulty){
