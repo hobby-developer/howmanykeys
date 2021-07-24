@@ -42,7 +42,7 @@ function referenceSelected() {
 
 var songDOM = [];
 function updateAvailableSongs(){
-  songDOM.map(dom = >dom.remove());
+  songDOM.map(dom => dom.remove());
   songlist.map(
     function(song,i){
       if(MXNT > song.maxnote){
