@@ -18,7 +18,7 @@ async function initializeSongs() {
     songOptions[i].textContent = songlist[i].name + '-' + songlist[i].artist;
     songOptions[i].value = i;
     refsongmenu.append(songOptions[i]);
-    querysongmenu.append(songOptions[i].cloneNode());
+    querysongmenu.append(songOptions[i].cloneNode(true));
   }
   return songOptions;
 }
