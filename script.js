@@ -12,22 +12,19 @@ async function initializeSongs() {
   const refsongmenu = document.getElementById("refsong");
   const querysongmenu = document.getElementById("querysong");
 
-  var refSongOptions = [];
-  var querySongOptions = [];
+  var songOptions = [];
   for (let i = 0; i < songlist.length; i++) {
-    refSongOptions[i] = document.createElement('option');
-    refSongOptions[i].textContent = songlist[i].name + '-' + songlist[i].artist;
-    refSongOptions[i].value = i;
+    songOptions[i] = document.createElement('option');
+    songOptions[i].textContent = songlist[i].name + '-' + songlist[i].artist;
+    songOptions[i].value = i;
+    refsongmenu.append(songOptions[i]);
+    querysongmenu.append(songOptions[i]);
   }
-  querySongOptions = refSongOptions;
-
-  refsongmenu.append(refSongOptions);
-  querysongmenu.append(querySongOptions);
 }
 
 function referenceSelected() {
   const maxnoteindicator = document.getElementById("maxnoteindicate");
-  const targetselectui = document.getElementById("targetSelect");
+  const targetselectui = document.getElementById("querySelect");
   var refsongid = refsongmenu.value;
   var refdifficulty = document.getElementById("refdifficulty").value;
 
