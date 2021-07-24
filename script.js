@@ -21,8 +21,8 @@ async function initializeSongs() {
   }
   querySongOptions = refSongOptions;
 
-  refsongmenu.appendChild(refSongOptions);
-  querysongmenu.appendChild(querySongOptions);
+  refsongmenu.append(refSongOptions);
+  querysongmenu.append(querySongOptions);
 }
 
 function referenceSelected() {
