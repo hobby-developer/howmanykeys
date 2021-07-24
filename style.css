@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+
 body{
   background-color: #60EAC0;
-  font-family: 'Do Hyeon', sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
   font-size : 40px;
   margin : 0px;
   padding: 0px;
 }
 h1{
+  font-family: 'Do Hyeon', sans-serif;
   text-align: center;
   font-size: 150px;
   color: white;
@@ -32,12 +35,13 @@ div{
 }
 
 h3{
+  margin-top: 0px;
   font-size: 60px;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 select{
-  font-family: 'Do Hyeon', sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
   font-size : 40px;
   border-color: #E9E9E9;
   border-radius: 0px;
@@ -47,11 +51,13 @@ select{
 
 
 #yourmaxnote{
-  font-size: 100px;
+  font-size: 80px;
+  font-weight: bold;
 }
 
 #querykey{
   font-size: 100px;
+  font-weight: bold;
 }
 
 .note {
