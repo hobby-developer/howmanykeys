@@ -58,6 +58,10 @@ function querySongSelected(){
   var querysongid = querysongmenu.value;
   var querydifficulty = document.getElementById("querydifficulty").value;
 
+  if (querysongid === "select"){
+    return;
+  }
+
   [dkey, key] = querynote(querysongid,querydifficulty);
 
   document.getElementById("querykey").innerHTML = dkey +'키 (' + note2comptext(key) + ')';
