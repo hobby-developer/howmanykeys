@@ -1,6 +1,9 @@
 var songlist;
 var MXNT;
 
+const refsongmenu = document.getElementById("refsong");
+const querysongmenu = document.getElementById("querysong");
+
 initializeSongs().then(function(options){
   for (let i = 0; i<options.length;i++){
     refsongmenu.append(options[i]);
@@ -14,9 +17,6 @@ async function initializeSongs() {
     .then(response => response.json())
     .then(data => songlist = data)
     .catch(err => console.log(err));
-
-  const refsongmenu = document.getElementById("refsong");
-  const querysongmenu = document.getElementById("querysong");
 
   var songOptions = [];
   for (let i = 0; i < songlist.length; i++) {
