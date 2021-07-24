@@ -59,6 +59,14 @@ select{
 #querykey{
   font-size: 100px;
   font-weight: bold;
+  margin-bottom: 0px;
+}
+
+#queryroot{
+  font-size: 70px;
+  font-weight: bold;
+  color: #909090;
+  margin-top : 0px;
 }
 
 .note {

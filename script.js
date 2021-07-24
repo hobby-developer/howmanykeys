@@ -67,7 +67,8 @@ function querySongSelected(){
 
   [dkey, key] = querynote(querysong,querydifficulty);
 
-  document.getElementById("querykey").innerHTML = (dkey<0?"":"+") + dkey +'키 (' + note2comptext(key) + ')';
+  document.getElementById("querykey").innerHTML = (dkey<0?"":"+") + dkey +'키';
+  document.getElementById("queryroot").innerHTML = note2comptext(key);
   document.getElementById("queryprelyrics").innerHTML = querysong.maxlyrics[0];
   document.getElementById("querymaxlyrics").innerHTML = querysong.maxlyrics[1];
   document.getElementById("querypostlyrics").innerHTML = querysong.maxlyrics[2];
