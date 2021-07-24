@@ -12,9 +12,9 @@ async function initializeSongs() {
   const refsongmenu = document.getElementById("refsong");
   const querysongmenu = document.getElementById("querysong");
 
-  var refSongOptions;
-  var querySongOptions;
-  for (i = 0; i < songlist.length; i++) {
+  var refSongOptions = [];
+  var querySongOptions = [];
+  for (let i = 0; i < songlist.length; i++) {
     refSongOptions[i] = document.createElement('option');
     refSongOptions[i].textContent = songlist[i].name + '-' + songlist[i].artist;
     refSongOptions[i].value = i;
