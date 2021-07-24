@@ -1,67 +1,80 @@
 var songlist;
 
-/*
-
-getJSONP('https://hobby-developer.github.io/howmanykeys/songlist.json',
-function(data){
-  songlist = data;
-});
-
-*/
-
-
 fetch('./songlist.json')
   .then(response => response.json())
-  .then(data => console.log(data))
+  .then(data => songlist = data)
   .catch(err => console.log(err));
+
+const refsongmenu = document.getElementById("refsong");
+const querysongmenu = document.getElementById("querysong");
+
+var refSongOptions;
+var querySongOptions;
+for(i=0; i<songlist.length; i++){
+  refSongOptions[i] = document.createElement('option');
+  refSongOptions[i].textContent = songlist[i].name + '-' + songlist[i].artist;
+  refSongOptions[i].value = i;
+}
+querySongOptions = refSongOptions;
+
+refsongmenu.appendChild(refSongOptions);
+querysongmenu.appendChild(querySongOptions);
 
 var MXNT;
 function referenceSelected() {
-  var maxnoteindicator = document.getElementById("maxnoteindicate");
-  var targetselectui = document.getElementById("targetSelect");
-  var refsong = document.getElementById("refname").value;
+  const maxnoteindicator = document.getElementById("maxnoteindicate");
+  const targetselectui = document.getElementById("targetSelect");
+  var refsongid = refsongmenu.value;
   var refdifficulty = document.getElementById("refdifficulty").value;
 
-  MXNT = maxnote(refsong, refdifficulty);
+  MXNT = maxnote(refsongid, refdifficulty);
+
   document.getElementById("yourmaxnote").innerHTML = note2text(MXNT);
 
   maxnoteindicator.hidden = false;
   targetselectui.hidden = false;
 };
 
-function targetSongSelected(){
-  var refsong = document.getElementById("refname").value;
-  var refdifficulty = document.getElementById("refdifficulty").value;
-  MXNT
+function querySongSelected(){
+  var querysongid = querysongmenu.value;
+  var querydifficulty = document.getElementById("querydifficulty").value;
+
+  [dkey, key] = querynote(querysongid,querydifficulty);
+
+  document.getElementById("querykey").innerHTML = dkey +'키 (' + note2comptext(key) + ')';
 }
 
-function maxnote(song, difficulty) {
+function maxnote(songid, difficulty) {
   var mxnt;
-  switch (song) {
-    case 'seosi' :
-      mxnt = 9; //A4
-      break;
-    case 'izi' :
-      mxnt = 8; //Ab4
-      break;
-  };
-
-  switch (difficulty) {
-    case 'easy' :
-      mxnt += 3;
-      break;
-    case 'normal' :
-      mxnt += 2;
-      break;
-    case 'hard' :
-  };
+  mxnt = songlist[songid].maxnote + difficultyCorrection(difficulty);
 
   return mxnt;
 };
 
+function querynote(songid,difficulty){
+  mxnt = MXNT - difficultyCorrection(difficulty);
+  return [mxnt - songlist[songid].maxnote, mxnt - songlist[songid].root];
+}
+
+function difficultyCorrection(difficulty){
+  switch (difficulty){
+    case 'easy' :
+      return 3;
+      break;
+    case 'normal' :
+      return 2;
+      break;
+    case 'hard' :
+      return 0;
+      break;
+  }
+}
+
 function note2text(note) {
   //0 is C4
   var key = note % 12;
+  if (key<0) {key += 12};
+
   var octave = Math.floor(note / 12);
   const keylist = ['C',
     'C#',
@@ -95,6 +108,7 @@ function note2text(note) {
 function note2comptext(note) {
   //0 is C4
   var key = note % 12;
+  if (key<0) {key += 12};
   const keylist = ['C',
     'C# (D♭)',
     'D',
@@ -110,20 +124,3 @@ function note2comptext(note) {
   ];
   return keylist[key];
 }
-
-function getJSONP(url, success) {
-
-    var ud = '_' + +new Date,
-        script = document.createElement('script'),
-        head = document.getElementsByTagName('head')[0]
-               || document.documentElement;
-
-    window[ud] = function(data) {
-        head.removeChild(script);
-        success && success(data);
-    };
-
-    script.src = url.replace('callback=?', 'callback=' + ud);
-    head.appendChild(script);
-
-};
