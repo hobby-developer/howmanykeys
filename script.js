@@ -35,6 +35,7 @@ function referenceSelected() {
 
   maxnoteindicator.hidden = false;
   targetselectui.hidden = false;
+  querySongSelected();
 };
 
 function querySongSelected(){
