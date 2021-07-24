@@ -1,0 +1,38 @@
+[
+  {
+    "name": "응급실";
+    "artist": "izi";
+    "root": 3;
+    "maxnote": 9;
+  },
+  {
+    "name": "서시";
+    "artist": "mc the max";
+    "root": 2;
+    "maxnote": 8;
+  },
+  {
+    "name": "좋니";
+    "artist": "윤종신";
+    "root": 3;
+    "maxnote": 9;
+  },
+  {
+    "name": "Timeless";
+    "artist": "SG 워너비";
+    "root": 11;
+    "maxnote": 10
+  },
+  {
+    "name": "소주 한 잔";
+    "artist": "임창정";
+    "root": 11;
+    "maxnote": 11;
+  },
+  {
+    "name": "형";
+    "artist": "노라조";
+    "root": 8;
+    "maxnote": 13;
+  }
+]
