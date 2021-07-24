@@ -24,6 +24,7 @@ async function initializeSongs() {
     songOptions[i].textContent = songlist[i].name + '-' + songlist[i].artist;
     songOptions[i].value = i;
   }
+  return songOptions;
 }
 
 function referenceSelected() {
