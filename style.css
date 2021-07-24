@@ -1,16 +1,70 @@
-#yourmaxnote{
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+body{
+  background-color: #60EAC0;
+  font-family: 'Do Hyeon', sans-serif;
+  font-size : 40px;
+  margin : 0px;
+  padding: 0px;
+}
+h1{
+  text-align: center;
+  font-size: 150px;
+  color: white;
+  margin-bottom: 20px;
+}
+h2{
+  text-align: center;
+  font-weight: normal;
   font-size: 30px;
+  color: #F0F0F0;
+  margin-bottom: 100px;
+}
+
+div{
+  box-shadow: 6px 6px 0px #209A60;
+  border-radius: 20px;
+  padding:20px;
+  text-align: center;
+  background-color: #F9F9F9;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 100px;
+}
+
+h3{
+  font-size: 60px;
+  font-weight: normal;
+}
+
+select{
+  font-family: 'Do Hyeon', sans-serif;
+  font-size : 40px;
+  border-color: #E9E9E9;
+  border-radius: 0px;
+  border-width: 3px;
+  vertical-align: text-bottom;
+}
+
+
+#yourmaxnote{
+  font-size: 100px;
 }
 
 #querykey{
-  font-size: 50px;
+  font-size: 100px;
+}
+
+.note {
+    font-size: 20px;
+    color: #A0A0A0;
 }
 
 .lyrics{
-  font-size: 20px;
+  font-size: 40px;
+  color: #606060;
 }
 
 .lyrics_highlight{
-  font-size: 30px;
-  color: red;
+  font-size: 60px;
+  color: #FF6060;
 }

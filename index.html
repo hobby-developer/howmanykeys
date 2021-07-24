@@ -8,6 +8,9 @@
 </head>
 
 <body>
+  <h1>몇키낮추지?</h1>
+  <h2>노래방 조옮김 계산기<br>by Hyeokjin Cho</h2>
+
   <div id = "referenceSelect" margin-bottom = "150px">
   <form onchange = "referenceSelected();  updateAvailableSongs();  querySongSelected();">
     <label for="refsong">나는 </label>
@@ -28,12 +31,12 @@
   <div id = "maxnoteindicate" hidden = true>
     <p> 그렇다면 당신의 최고음은...</p>
     <p id = "yourmaxnote">? (?)</p>
-    <p> 가사 : 
+    <p>가사 :
       <span id = "refprelyrics" class = "lyrics"></span>
       <span id = "refmaxlyrics" class = "lyrics_highlight"></span>
       <span id = "refpostlyrics" class = "lyrics"></span>
     </p>
-    <p>※주의! 최고음과 노래방기계에서 표시되는 키 (으뜸음) 는 다릅니다! 아래 계산기에서 여러분이 부르고 싶은 노래의 키를 확인하세요.</p>
+    <p class = "note">※주의! 최고음과 노래방기계에서 표시되는 키 (으뜸음) 는 다릅니다! 아래 계산기에서 여러분이 부르고 싶은 노래의 키를 확인하세요.</p>
   </div>
 
   <div id = "querySelect" hidden = true>
@@ -51,14 +54,14 @@
       <!-- <input type="submit"> -->
     </form>
     <p id = "querykey"></p>
-    <p>
+    <p>가사 :
       <span id = "queryprelyrics" class = "lyrics"></span>
       <span id = "querymaxlyrics" class = "lyrics_highlight"></span>
       <span id = "querypostlyrics" class = "lyrics"></span>
     </p>
   </div>
   <div id = "availableSongs" hidden = true>
-    <p>원키로 도전해 볼 수 있는 노래들</p>
+    <h3>원키로 도전해 볼 수 있는 노래들</h3>
     <ol id = "availableSongList"></ol>
   </div>
 </body>
