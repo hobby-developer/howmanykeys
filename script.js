@@ -13,7 +13,7 @@ function(data){
 fetch('./songlist.json')
   .then(response => response.json())
   .then(data => console.log(data))
-  .catch(err => console.log(error));
+  .catch(err => console.log(err));
 
 var MXNT;
 function referenceSelected() {
