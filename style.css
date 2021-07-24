@@ -5,3 +5,12 @@
 #querykey{
   font-size: 50px;
 }
+
+.lyrics{
+  font-size: 20px;
+}
+
+.lyrics_highlight{
+  font-size: 30px;
+  color: red;
+}

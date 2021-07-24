@@ -9,10 +9,13 @@
 
 <body>
   <div id = "referenceSelect" margin-bottom = "150px">
-  <form onchange = "referenceSelected();  updateAvailableSongs();  querySongSelected();">
+  <form>
     <label for="refsong">나는 </label>
     <select id="refsong" name="refsong" value="select">
       <option value="select" hidden>노래를 선택하세요</option>
+      <option value="seosi">서시 - mc the max</option>
+      <option value="timeless">Timeless -	SG워너비</option>
+      <option value="jonni">좋니	- 윤종신</option>
     </select>
     <label for="refdifficulty"> 을 </label>
     <select id="refdifficulty" name="refdifficulty">
@@ -25,21 +28,22 @@
   </form>
   </div>
 
-  <div id = "maxnoteindicate" hidden = true>
+  <div id = "maxnoteindicate">
     <p> 그렇다면 당신의 최고음은...</p>
-    <p id = "yourmaxnote">? (?)</p>
-    <p> 가사 : 
-      <span id = "refprelyrics" class = "lyrics"></span>
-      <span id = "refmaxlyrics" class = "lyrics_highlight"></span>
-      <span id = "refpostlyrics" class = "lyrics"></span>
-    </p>
+    <p id = "yourmaxnote">A# (2옥 라#)</p>
+    <span id = "refprelyrics" class = "lyrics">내가 항상 여기 서</span>
+    <span id = "refmaxlyrics" class = "lyrics_highlight">있을</span>
+    <span id = "refpostlyrics" class = "lyrics">게</span>
     <p>※주의! 최고음과 노래방기계에서 표시되는 키 (으뜸음) 는 다릅니다! 아래 계산기에서 여러분이 부르고 싶은 노래의 키를 확인하세요.</p>
   </div>
 
-  <div id = "querySelect" hidden = true>
+  <div id = "querySelect">
     <form>
       <select id="querysong" name="querysong" onchange = "querySongSelected();" value = "select">
           <option value="select" hidden>노래를 선택하세요</option>
+          <option value="seosi">서시 - mc the max</option>
+          <option value="timeless">Timeless -	SG워너비</option>
+          <option value="jonni">좋니	- 윤종신</option>
       </select>
       <label for="querydifficulty"> 를 </label>
       <select id="querydifficulty" name="querydifficulty" onchange = "querySongSelected();">
@@ -50,16 +54,15 @@
       <label> 부르려면... </label>
       <!-- <input type="submit"> -->
     </form>
-    <p id = "querykey"></p>
-    <p>
-      <span id = "queryprelyrics" class = "lyrics"></span>
-      <span id = "querymaxlyrics" class = "lyrics_highlight"></span>
-      <span id = "querypostlyrics" class = "lyrics"></span>
-    </p>
+    <p id = "querykey">1키 (G)</p>
   </div>
-  <div id = "availableSongs" hidden = true>
+  <div id = "availableSongs">
     <p>원키로 도전해 볼 수 있는 노래들</p>
-    <ol id = "availableSongList"></ol>
+    <ol id = "availableSongList">
+      <li>서시 - mc the max</li>
+      <li>Timeless -	SG워너비</li>
+      <li>좋니	- 윤종신</li>
+    </ol>
   </div>
 </body>
 

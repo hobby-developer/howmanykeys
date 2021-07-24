@@ -28,12 +28,15 @@ function referenceSelected() {
   const maxnoteindicator = document.getElementById("maxnoteindicate");
   const targetselectui = document.getElementById("querySelect");
   const availSongui = document.getElementById("availableSongs");
-  var refsongid = refsongmenu.value;
-  var refdifficulty = document.getElementById("refdifficulty").value;
+  var refsong = songlist[refsongmenu.value];
+  var refdifficulty = document.getElementById("refdifficulty").value
 
-  MXNT = maxnote(refsongid, refdifficulty);
+  MXNT = refsong.maxnote + difficultyCorrection(refdifficulty);
 
   document.getElementById("yourmaxnote").innerHTML = note2text(MXNT);
+  document.getElementById("refprelyrics").innerHTML = refsong.maxlyrics[1];
+  document.getElementById("refmaxlyrics").innerHTML = refsong.maxlyrics[2];
+  document.getElementById("refpostlyrics").innerHTML = refsong.maxlyrics[3];
 
   maxnoteindicator.hidden = false;
   targetselectui.hidden = false;
@@ -55,28 +58,25 @@ function updateAvailableSongs(){
 }
 
 function querySongSelected(){
-  var querysongid = querysongmenu.value;
+  var querysong = songlist[querysongmenu.value];
   var querydifficulty = document.getElementById("querydifficulty").value;
 
   if (querysongid === "select"){
     return;
   }
 
-  [dkey, key] = querynote(querysongid,querydifficulty);
+  [dkey, key] = querynote(querysong,querydifficulty);
 
   document.getElementById("querykey").innerHTML = dkey +'키 (' + note2comptext(key) + ')';
+  document.getElementById("queryprelyrics").innerHTML = querysong.maxlyrics[1];
+  document.getElementById("querymaxlyrics").innerHTML = querysong.maxlyrics[2];
+  document.getElementById("querypostlyrics").innerHTML = querysong.maxlyrics[3];
 }
 
-function maxnote(songid, difficulty) {
-  var mxnt;
-  mxnt = songlist[songid].maxnote + difficultyCorrection(difficulty);
 
-  return mxnt;
-};
-
-function querynote(songid,difficulty){
+function querynote(song,difficulty){
   mxnt = MXNT - difficultyCorrection(difficulty);
-  return [mxnt - songlist[songid].maxnote, mxnt - songlist[songid].root];
+  return [mxnt - song.maxnote, mxnt - song.root];
 }
 
 function difficultyCorrection(difficulty){
