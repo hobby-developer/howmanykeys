@@ -4,13 +4,7 @@ var MXNT;
 const refsongmenu = document.getElementById("refsong");
 const querysongmenu = document.getElementById("querysong");
 
-initializeSongs().then(function(options){
-  for (let i = 0; i<options.length;i++){
-    refsongmenu.append(options[i]);
-    querysongmenu.append(options[i]);
-  }
-});
-
+initializeSongs()
 
 async function initializeSongs() {
   await fetch('./songlist.json')
@@ -23,6 +17,8 @@ async function initializeSongs() {
     songOptions[i] = document.createElement('option');
     songOptions[i].textContent = songlist[i].name + '-' + songlist[i].artist;
     songOptions[i].value = i;
+    refsongmenu.append(songOptions[i]);
+    querysongmenu.append(songOptions[i].cloneNode());
   }
   return songOptions;
 }
