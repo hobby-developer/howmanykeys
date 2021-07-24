@@ -1,6 +1,6 @@
 var songlist;
 
-fetch('./songlist.json')
+await fetch('./songlist.json')
   .then(response => response.json())
   .then(data => songlist = data)
   .catch(err => console.log(err));
