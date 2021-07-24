@@ -40,5 +40,33 @@
     "root": 8,
     "maxnote": 13,
     "maxlyrics":["넘어지면 어때 살다","보","면 살아가다보면"]
+  },
+  {
+    "name": "오래된 노래",
+    "artist": "스탠딩 에그",
+    "root": 5,
+    "maxnote": 11,
+    "maxlyrics":["살아가다 한번쯤 우연히 만날 ","것"," 같아"]
+  },
+  {
+    "name": "어디에도",
+    "artist": "mc the max",
+    "root": 6,
+    "maxnote": 14,
+    "maxlyrics":["행복했던 것만 ","기","억에 남아"]
+  },
+  {
+    "name": "다행이다",
+    "artist": "이적",
+    "root": 4,
+    "maxnote": 6,
+    "maxlyrics":["행여 무의미한 일","이"," 아니라는 게"]
+  },
+  {
+    "name": "안아줘",
+    "artist": "정준일",
+    "root": 0,
+    "maxnote": 7,
+    "maxlyrics":["니가 없는 하루 견딜 수가 없어 이젠","뭘 어","떻게 해야 할지 모르겠어"]
   }
 ]
