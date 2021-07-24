@@ -134,16 +134,16 @@ function note2comptext(note) {
   var key = note % 12;
   if (key<0) {key += 12};
   const keylist = ['C',
-    'C# (D♭)',
+    'C# 또는 D♭',
     'D',
-    'D# (E♭)',
+    'D# 또는 E♭',
     'E',
     'F',
-    'F# (G♭)',
+    'F# 또는 G♭',
     'G',
-    'G# (A♭)',
+    'G# 또는 A♭',
     'A',
-    'A# (B♭)',
+    'A# 또는 B♭',
     'B'
   ];
   return keylist[key];
