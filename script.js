@@ -10,7 +10,7 @@ function(data){
 */
 
 
-fetch('./Data.json')
+fetch('./songlist.json')
   .then(response => response.json())
   .then(data => console.log(data))
   .catch(err => console.log(error));
