@@ -61,7 +61,7 @@ function querySongSelected(){
   var querysong = songlist[querysongmenu.value];
   var querydifficulty = document.getElementById("querydifficulty").value;
 
-  if (querysongid === "select"){
+  if (querysong === undefined){
     return;
   }
 
