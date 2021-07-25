@@ -32,7 +32,7 @@ function referenceSelected() {
   var refsong = songlist[refsongmenu.value];
   var refdifficulty = document.getElementById("refdifficulty").value
 
-  MXNT = refsong.maxnote + difficultyCorrection(refdifficulty)-2; //normal is center
+  MXNT = refsong.maxnote + difficultyCorrection(refdifficulty)-1; //normal is center
 
   document.getElementById("yourmaxnote").innerHTML = note2text(MXNT);
   document.getElementById("refprelyrics").innerHTML = refsong.maxlyrics[0];
@@ -104,10 +104,10 @@ function querynote(song,difficulty){
 function difficultyCorrection(difficulty){
   switch (difficulty){
     case 'easy' :
-      return 3;
+      return 2;
       break;
     case 'normal' :
-      return 2;
+      return 1;
       break;
     case 'hard' :
       return 0;
