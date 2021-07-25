@@ -31,7 +31,7 @@ function referenceSelected() {
   var refsong = songlist[refsongmenu.value];
   var refdifficulty = document.getElementById("refdifficulty").value
 
-  MXNT = refsong.maxnote + difficultyCorrection(refdifficulty);
+  MXNT = refsong.maxnote + difficultyCorrection(refdifficulty)-2; //normal is center
 
   document.getElementById("yourmaxnote").innerHTML = note2text(MXNT);
   document.getElementById("refprelyrics").innerHTML = refsong.maxlyrics[0];
@@ -48,7 +48,7 @@ function updateAvailableSongs(){
   songDOM.map(dom => dom.remove());
   songlist.map(
     function(song,i){
-      if(MXNT > song.maxnote){
+      if(MXNT + song.compensation > song.maxnote){
         songDOM[i] = document.createElement('li');
         songDOM[i].textContent = songlist[i].name + '-' + songlist[i].artist;
         availsonglist.appendChild(songDOM[i]);
@@ -60,12 +60,23 @@ function updateAvailableSongs(){
 function querySongSelected(){
   var querysong = songlist[querysongmenu.value];
   var querydifficulty = document.getElementById("querydifficulty").value;
+  const compIndicator = document.getElementById("querykeycompensate");
 
   if (querysong === undefined){
     return;
   }
 
   [dkey, key] = querynote(querysong,querydifficulty);
+
+  comp = querysong.compensation;
+  if(comp != 0){
+    compIndicator.innerHTML = '고음 빈도가 높아요!' + comp + '키 보정';
+    compIndicator.hidden = false;
+    dkey += comp;
+    key += comp;
+  }else {
+    compIndicator.hidden = true;
+  }
 
   document.getElementById("querykey").innerHTML = (dkey<0?"":"+") + dkey +'키';
   document.getElementById("queryroot").innerHTML = note2comptext(key);

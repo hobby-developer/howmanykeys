@@ -4,69 +4,79 @@
     "artist": "izi",
     "root": 3,
     "maxnote": 10,
-    "maxlyrics" : ["나를 버리지마 그냥 날 ", "안","아줘"]
+    "maxlyrics" : ["나를 버리지마 그냥 날 ", "안","아줘"],
+    "compensation":0
   },
   {
     "name": "서시",
     "artist": "mc the max",
     "root": 2,
     "maxnote": 9,
-    "maxlyrics" : ["내가 항상 여기 서", "있을","게"]
+    "maxlyrics" : ["내가 항상 여기 서", "있을","게"],
+    "compensation":0
   },
   {
     "name": "좋니",
     "artist": "윤종신",
     "root": 3,
     "maxnote": 10,
-    "maxlyrics":["뒤끝 있는 너의 예전 남자친구일 뿐 스쳤던 ", "그","저 그런 사랑"]
+    "maxlyrics":["뒤끝 있는 너의 예전 남자친구일 뿐 스쳤던 ", "그","저 그런 사랑"],
+    "compensation":-2
   },
   {
     "name": "Timeless",
     "artist": "SG 워너비",
     "root": 11,
     "maxnote": 10,
-    "maxlyrics":["날 아프게 했지만 울게 했지만 이것 ","하","나 만큼은 고마워"]
+    "maxlyrics":["날 아프게 했지만 울게 했지만 이것 ","하","나 만큼은 고마워"],
+    "compensation":0
   },
   {
     "name": "소주 한 잔",
     "artist": "임창정",
     "root": 11,
     "maxnote": 11,
-    "maxlyrics":["그대를 다시 불러","오","라고 미친 듯이 울었어"]
+    "maxlyrics":["그대를 다시 불러","오","라고 미친 듯이 울었어"],
+    "compensation":-1
   },
   {
     "name": "형",
     "artist": "노라조",
     "root": 8,
     "maxnote": 13,
-    "maxlyrics":["넘어지면 어때 살다","보","면 살아가다보면"]
+    "maxlyrics":["넘어지면 어때 살다","보","면 살아가다보면"],
+    "compensation":0
   },
   {
     "name": "오래된 노래",
     "artist": "스탠딩 에그",
     "root": 5,
     "maxnote": 11,
-    "maxlyrics":["살아가다 한번쯤 우연히 만날 ","것"," 같아"]
+    "maxlyrics":["살아가다 한번쯤 우연히 만날 ","것"," 같아"],
+    "compensation":0
   },
   {
     "name": "어디에도",
     "artist": "mc the max",
     "root": 6,
     "maxnote": 14,
-    "maxlyrics":["행복했던 것만 ","기","억에 남아"]
+    "maxlyrics":["행복했던 것만 ","기","억에 남아"],
+    "compensation":-2
   },
   {
     "name": "다행이다",
     "artist": "이적",
     "root": 4,
     "maxnote": 6,
-    "maxlyrics":["행여 무의미한 일","이"," 아니라는 게"]
+    "maxlyrics":["행여 무의미한 일","이"," 아니라는 게"],
+    "compensation":0
   },
   {
     "name": "안아줘",
     "artist": "정준일",
     "root": 0,
     "maxnote": 7,
-    "maxlyrics":["니가 없는 하루 견딜 수가 없어 이젠","뭘 어","떻게 해야 할지 모르겠어"]
+    "maxlyrics":["니가 없는 하루 견딜 수가 없어 이젠","뭘 어","떻게 해야 할지 모르겠어"],
+    "compensation":0
   }
 ]

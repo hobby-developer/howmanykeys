@@ -40,14 +40,23 @@ h3{
   font-weight: bold;
 }
 
-select{
+select, button{
   font-family: 'Noto Sans KR', sans-serif;
   font-size : 40px;
-  border-color: #E9E9E9;
-  border-radius: 0px;
-  border-width: 3px;
   vertical-align: text-bottom;
+}
+select{
+  border-radius: 0px;
   background-color: white;
+  border-width: 3px;
+  border-color: #E9E9E9;
+}
+button{
+  border-radius: 10px;
+  border-width: 3px;
+  border-color: #50DAB0;
+  background-color: #50DAB0;
+  color : white;
 }
 
 
@@ -55,10 +64,16 @@ select{
   font-size: 80px;
   font-weight: bold;
 }
+#querykeycompensate{
+  font-size: 30px;
+  color: red;
+  margin-bottom: 0px;
+}
 
 #querykey{
   font-size: 100px;
   font-weight: bold;
+  margin-top:20px;
   margin-bottom: 0px;
 }
 
