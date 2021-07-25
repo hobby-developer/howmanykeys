@@ -51,7 +51,7 @@ function updateAvailableSongs(){
   songlist.map(
     function(song,i){
       if(MXNT + song.compensation > song.maxnote){
-        songDOM[i] = document.createElement('li');
+        songDOM[i] = document.createElement('ui');
         songDOM[i].textContent = songlist[i].name + '-' + songlist[i].artist;
         availsonglist.appendChild(songDOM[i]);
       }
