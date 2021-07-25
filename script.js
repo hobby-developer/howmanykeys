@@ -28,6 +28,7 @@ function referenceSelected() {
   const maxnoteindicator = document.getElementById("maxnoteindicate");
   const targetselectui = document.getElementById("querySelect");
   const availSongui = document.getElementById("availableSongs");
+  const askdeveloperui = document.getElementById("askdeveloper");
   var refsong = songlist[refsongmenu.value];
   var refdifficulty = document.getElementById("refdifficulty").value
 
@@ -41,6 +42,7 @@ function referenceSelected() {
   maxnoteindicator.hidden = false;
   targetselectui.hidden = false;
   availSongui.hidden = false;
+  askdeveloperui.hidden = false;
 };
 
 var songDOM = [];
@@ -67,7 +69,6 @@ function querySongSelected(){
   }
 
   [dkey, key] = querynote(querysong,querydifficulty);
-
   comp = querysong.compensation;
   if(comp != 0){
     compIndicator.innerHTML = '고음 빈도가 높아요!' + comp + '키 보정';
@@ -76,6 +77,14 @@ function querySongSelected(){
     key += comp;
   }else {
     compIndicator.hidden = true;
+  }
+
+  if (querydifficulty === "hard"){
+    compIndicator.style.textDecoration = "line-through";
+    dkey -= comp;
+    key -= comp;
+  } else {
+    compIndicator.style.textDecoration = "none";
   }
 
   document.getElementById("querykey").innerHTML = (dkey<0?"":"+") + dkey +'키';
