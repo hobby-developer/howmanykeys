@@ -4,7 +4,7 @@
 body{
   background-color: #60EAC0;
   font-family: 'Noto Sans KR', sans-serif;
-  font-size : 40px;
+  font-size : 2em;
   margin : 0px;
   padding: 0px;
 }
@@ -25,7 +25,7 @@ h2{
 
 div{
   box-shadow: 6px 6px 0px #209A60;
-  border-radius: 20px;
+  border-radius: 1em;
   padding:20px;
   text-align: center;
   background-color: #F9F9F9;
@@ -42,7 +42,7 @@ h3{
 
 select, button{
   font-family: 'Noto Sans KR', sans-serif;
-  font-size : 40px;
+  font-size : 1em;
   vertical-align: text-bottom;
 }
 select{
@@ -65,8 +65,8 @@ button{
   font-weight: bold;
 }
 #querykeycompensate{
-  font-size: 30px;
-  color: red;
+  font-size: 0.8em;
+  color: #FF6060;
   margin-bottom: 0px;
 }
 
@@ -85,16 +85,16 @@ button{
 }
 
 .note {
-    font-size: 20px;
+    font-size: 50%;
     color: #A0A0A0;
 }
 
 .lyrics{
-  font-size: 40px;
+  font-size: 1.2em;
   color: #606060;
 }
 
 .lyrics_highlight{
-  font-size: 60px;
+  font-size: 1.5em;
   color: #FF6060;
 }
