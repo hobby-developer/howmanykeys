@@ -1,38 +1,87 @@
 var songlist;
 var MXNT;
+var refsongform
+var refsong;
+var querysong;
 
-const refsongmenu = document.getElementById("refsong");
-const querysongmenu = document.getElementById("querysong");
-const availsonglist = document.getElementById("availableSongList");
 
-initializeSongs()
+main();
 
-async function initializeSongs() {
+async function main() {
+  await fetchSongs();
+  //const refsongform = initializeSongForm('#refSong');
+  refsongform = initializeSongForm('#refSong',
+    function(selection) {
+      refsong = selection;
+      referenceSelected();
+      updateAvailableSongs();
+      querySongSelected();
+
+    });
+  const querysongform = initializeSongForm('#querySong',
+    function(selection) {
+      querysong = selection;
+      querySongSelected();
+    });
+}
+
+async function fetchSongs() {
   await fetch('./songlist.json')
     .then(response => response.json())
     .then(data => songlist = data)
     .catch(err => console.log(err));
+  songlist.map(song => song.fullname = song.artist + ' - ' + song.name)
+};
 
-  var songOptions = [];
-  songlist.map(function(song,i){
-      songOptions = document.createElement('option');
-      songOptions.textContent = song.name + '-' + song.artist;
-      songOptions.value = i;
-      refsongmenu.appendChild(songOptions);
-      querysongmenu.appendChild(songOptions.cloneNode(true));
+function initializeSongForm(selector, selectedCallback) {
+  var AC = new autoComplete({
+    selector: selector,
+    placeHolder: "노래 제목 혹은 가수를 입력하세요",
+    data: {
+      src: songlist,
+      keys: ["fullname"]
+    },
+    resultItem: {
+      highlight: {
+        render: true
+      }
+    },
+    submit: true,
+    resultsList: {
+      element: (list, data) => {
+        const requestSongPanel = document.getElementById("requestSong").cloneNode(true);
+        if (data.results.length > 0) {
+          requestSongPanel.hidden = true;
+        } else {
+          requestSongPanel.hidden = false;
+        }
+        list.prepend(requestSongPanel);
+      },
+      noResults: true,
+      maxResults: 15,
+      tabSelect: true
     }
-  );
-}
+  });
+
+  AC.input.addEventListener("selection", function(event) {
+    const feedback = event.detail;
+    const selection = feedback.selection.value;
+    selectedCallback(selection);
+    // Replace Input value with the selected value
+    AC.input.value = selection[feedback.selection.key];
+  })
+
+  return AC
+};
 
 function referenceSelected() {
   const maxnoteindicator = document.getElementById("maxnoteindicate");
   const targetselectui = document.getElementById("querySelect");
   const availSongui = document.getElementById("availableSongs");
   const askdeveloperui = document.getElementById("askdeveloper");
-  var refsong = songlist[refsongmenu.value];
   var refdifficulty = document.getElementById("refdifficulty").value
 
-  MXNT = refsong.maxnote + difficultyCorrection(refdifficulty)-1; //normal is center
+  MXNT = refsong.maxnote + difficultyCorrection(refdifficulty) - 1; //normal is center
 
   document.getElementById("yourmaxnote").innerHTML = note2text(MXNT);
   document.getElementById("refprelyrics").innerHTML = refsong.maxlyrics[0];
@@ -46,11 +95,14 @@ function referenceSelected() {
 };
 
 var songDOM = [];
-function updateAvailableSongs(){
+
+function updateAvailableSongs() {
+  const availsonglist = document.getElementById("availableSongList");
+
   songDOM.map(dom => dom.remove());
   songlist.map(
-    function(song,i){
-      if(MXNT + song.compensation > song.maxnote){
+    function(song, i) {
+      if (MXNT + song.compensation > song.maxnote) {
         songDOM[i] = document.createElement('ul');
         songDOM[i].textContent = songlist[i].name + '-' + songlist[i].artist;
         availsonglist.appendChild(songDOM[i]);
@@ -59,27 +111,26 @@ function updateAvailableSongs(){
   );
 }
 
-function querySongSelected(){
-  var querysong = songlist[querysongmenu.value];
+function querySongSelected() {
   var querydifficulty = document.getElementById("querydifficulty").value;
   const compIndicator = document.getElementById("querykeycompensate");
 
-  if (querysong === undefined){
+  if (querysong === undefined) {
     return;
   }
 
-  [dkey, key] = querynote(querysong,querydifficulty);
+  [dkey, key] = querynote(querysong, querydifficulty);
   comp = querysong.compensation;
-  if(comp != 0){
+  if (comp != 0) {
     compIndicator.innerHTML = '고음 빈도가 높아요!' + comp + '키 보정';
     compIndicator.hidden = false;
     dkey += comp;
     key += comp;
-  }else {
+  } else {
     compIndicator.hidden = true;
   }
 
-  if (querydifficulty === "hard"){
+  if (querydifficulty === "hard") {
     compIndicator.style.textDecoration = "line-through";
     dkey -= comp;
     key -= comp;
@@ -87,7 +138,7 @@ function querySongSelected(){
     compIndicator.style.textDecoration = "none";
   }
 
-  document.getElementById("querykey").innerHTML = (dkey<0?"":"+") + dkey +'키';
+  document.getElementById("querykey").innerHTML = (dkey < 0 ? "" : "+") + dkey + '키';
   document.getElementById("queryroot").innerHTML = note2comptext(key);
   document.getElementById("queryprelyrics").innerHTML = querysong.maxlyrics[0];
   document.getElementById("querymaxlyrics").innerHTML = querysong.maxlyrics[1];
@@ -95,21 +146,21 @@ function querySongSelected(){
 }
 
 
-function querynote(song,difficulty){
+function querynote(song, difficulty) {
   mxnt = MXNT - difficultyCorrection(difficulty);
   dkey = mxnt - song.maxnote;
   return [dkey, song.root + dkey];
 }
 
-function difficultyCorrection(difficulty){
-  switch (difficulty){
-    case 'easy' :
+function difficultyCorrection(difficulty) {
+  switch (difficulty) {
+    case 'easy':
       return 2;
       break;
-    case 'normal' :
+    case 'normal':
       return 1;
       break;
-    case 'hard' :
+    case 'hard':
       return 0;
       break;
   }
@@ -118,7 +169,9 @@ function difficultyCorrection(difficulty){
 function note2text(note) {
   //0 is C4
   var key = note % 12;
-  if (key<0) {key += 12};
+  if (key < 0) {
+    key += 12
+  };
 
   var octave = Math.floor(note / 12);
   const keylist = ['C',
@@ -153,7 +206,9 @@ function note2text(note) {
 function note2comptext(note) {
   //0 is C4
   var key = note % 12;
-  if (key<0) {key += 12};
+  if (key < 0) {
+    key += 12
+  };
   const keylist = ['C',
     'C# 또는 D♭',
     'D',

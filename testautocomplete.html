@@ -1,0 +1,22 @@
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.6/dist/css/autoComplete.min.css">
+</head>
+
+<body>
+    <input id="autoComplete">
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.6/dist/autoComplete.min.js"></script>
+<script>
+    const autoCompleteJS = new autoComplete({
+        placeHolder: "Search for Food...",
+        data: {
+            src: ["블랙핑크 - 마지막처럼","장범준 - 벚꽃 엔딩","장범준 - 여수 밤바다"]
+        },
+        resultItem: {
+            highlight: {
+                render: true
+            }
+        }
+    });
+</script>
