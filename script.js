@@ -139,6 +139,16 @@ function querySongSelected() {
   }
 
   document.getElementById("querykey").innerHTML = (dkey < 0 ? "" : "+") + dkey + '키';
+  const altui = document.getElementById("queryaltkey");
+  if (dkey > 6) {
+    altui.innerHTML = "= " + (dkey-12) + "키 (1옥타브 올려서)";
+    altui.hidden = false;
+  } else if(dkey < -6){
+    altui.innerHTML = "= +" + (dkey+12) + "키 (1옥타브 내려서)";
+    altui.hidden = false;
+  } else {
+    altui.hidden = true;
+  }
   document.getElementById("queryroot").innerHTML = note2comptext(key);
   document.getElementById("queryprelyrics").innerHTML = querysong.maxlyrics[0];
   document.getElementById("querymaxlyrics").innerHTML = querysong.maxlyrics[1];
