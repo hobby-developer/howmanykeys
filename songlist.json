@@ -166,6 +166,45 @@
     "maxnote": 12,
     "maxlyrics":["그댈 다시 부르고 또 불러도 아무 말 없는 너를","다","시"],
     "compensation":-1
+  },
+  {
+    "name": "Way Back Home",
+    "artist": "숀(Shaun)",
+    "root": 10,
+    "maxnote": 7,
+    "maxlyrics":["멈춘 시","간","속 잠든 너를 찾아가"],
+    "compensation":0
+  },
+  {
+    "name": "Marry Me",
+    "artist": "마크툽,구윤회(Maktub)",
+    "root": 10,
+    "maxnote": 14,
+    "maxlyrics":["그대와 함께 하는 매일이 내겐 천국","이","죠"],
+    "compensation":0
+  },
+  {
+    "name": "Next Level",
+    "artist": "에스파(aespa)",
+    "root": 6,
+    "maxnote": 16,
+    "maxlyrics":["Come on Show me the way to KOSMO","Yeah~",""],
+    "compensation":0
+  },
+  {
+    "name": "아로하(슬기로운 의사생활 OST)",
+    "artist": "조정석",
+    "root": 2,
+    "maxnote": 7,
+    "maxlyrics":["오직 너만 바라 볼거야","오~",""],
+    "compensation":0
+  },
+  {
+    "name": "나를 사랑했던 사람아",
+    "artist": "허각",
+    "root": 11,
+    "maxnote": 11,
+    "maxlyrics":["오직 너만 바라 볼거야","오~",""],
+    "compensation":-2
   }
-
 ]
