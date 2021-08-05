@@ -78,5 +78,94 @@
     "maxnote": 7,
     "maxlyrics":["니가 없는 하루 견딜 수가 없어 이젠","뭘 어","떻게 해야 할지 모르겠어"],
     "compensation":0
+  },
+  {
+    "name": "신호등",
+    "artist": "이무진",
+    "root": 11,
+    "maxnote": 9,
+    "maxlyrics":["내가 빠른지도 느","린지","도 모르겠어"],
+    "compensation":0
+  },
+  {
+    "name": "바라만 본다",
+    "artist": "MSG워너비",
+    "root": 7,
+    "maxnote": 9,
+    "maxlyrics":["얼마나 그리고 그리워해야 내 맘 너의 곁에","닿","게 될까"],
+    "compensation":0
+  },
+  {
+    "name": "추억은 만남보다 이별에 남아",
+    "artist": "정동하",
+    "root": 10,
+    "maxnote": 12,
+    "maxlyrics":["너무 사랑했다고 다시는 너를 떠","나","지 않겠다고"],
+    "compensation":-1
+  },
+  {
+    "name": "비와 당신(슬기로운 의사생활 시즌2 OST)",
+    "artist": "이무진",
+    "root": 7,
+    "maxnote": 7,
+    "maxlyrics":["바보 같은 난 눈","물","<strike>이(가성)</strike> 날까"],
+    "compensation":0
+  },
+  {
+    "name": "밝게 빛나는 별이 되어 비춰줄게",
+    "artist": "송이한",
+    "root": 5,
+    "maxnote": 13,
+    "maxlyrics":["길고 긴 시간 속에서 찾아올 끝에도 너","를","사랑할게"],
+    "compensation":-1
+  },
+  {
+    "name": "OHAYO MY NIGHT",
+    "artist": "디핵 (D-Hack), PATEKO",
+    "root": 7,
+    "maxnote": 7,
+    "maxlyrics":["내 방 천장에 그려본 내 우","주","에게 물어본"],
+    "compensation":0
+  },
+  {
+    "name": "꿈속에 너",
+    "artist": "에이치코드 (Feat.전상근)",
+    "root": 2,
+    "maxnote": 9,
+    "maxlyrics":["꿈속에 널 이젠 놓아주","려 해",""],
+    "compensation":-1
+  },
+  {
+    "name": "축가",
+    "artist": "전우성(노을)",
+    "root": 5,
+    "maxnote": 12,
+    "maxlyrics":["왜 그런 슬픈 눈으로 왜 나를 바라","보","는 데"],
+    "compensation":-1
+  },
+  {
+    "name": "너의 번호를 누르고",
+    "artist": "#안녕(Prod.영화처럼)",
+    "root": 4,
+    "maxnote": 11,
+    "maxlyrics":["너의 번호를 지우며 좋았던 시","간","을 덜어내"],
+    "compensation":-2
+  },
+  {
+    "name": "체념",
+    "artist": "빅마마",
+    "root": 8,
+    "maxnote": 17,
+    "maxlyrics":["다시","사","랑 같은거 하지 않을래"],
+    "compensation":0
+  },
+  {
+    "name": "포장마차",
+    "artist": "황인욱",
+    "root": 2,
+    "maxnote": 12,
+    "maxlyrics":["그댈 다시 부르고 또 불러도 아무 말 없는 너를","다","시"],
+    "compensation":-1
   }
+
 ]
