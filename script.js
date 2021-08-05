@@ -58,8 +58,9 @@ function initializeSongForm(selector, selectedCallback) {
         list.prepend(requestSongPanel);
       },
       noResults: true,
-      maxResults: 15,
-      tabSelect: true
+      maxResults: 65535,
+      tabSelect: true,
+      threshold: 0
     }
   });
 
@@ -70,6 +71,12 @@ function initializeSongForm(selector, selectedCallback) {
     // Replace Input value with the selected value
     AC.input.value = selection[feedback.selection.key];
   })
+
+
+  const ACdom = document.querySelector(selector);
+  ACdom.onclick = function(){
+    AC.start(" ");
+  };
 
   return AC
 };

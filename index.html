@@ -15,7 +15,7 @@
   <div class = "card" id = "referenceSelect" margin-bottom = "150px">
   <form onchange = "referenceSelected();  updateAvailableSongs();  querySongSelected();">
     <label>나는 </label>
-    <input id="refSong" name="refsong">
+    <input id="refSong" name="refsong" type="search" dir="ltr" spellcheck=false autocorrect="off" autocomplete="off" autocapitalize="off" tabindex="1">
     <label> 을 </label>
     <select id="refdifficulty" name="refdifficulty">
       <option value="easy">쉽게</option>
@@ -40,11 +40,11 @@
 
   <div class = "card" id = "querySelect" hidden = true>
     <form>
-      <input id="querySong" name="querySong">
+      <input id="querySong" name="querySong"  type="search" dir="ltr" spellcheck=false autocorrect="off" autocomplete="off" autocapitalize="off" tabindex="1">
       <label> 를 </label>
       <select id="querydifficulty" name="querydifficulty" onchange = "querySongSelected();">
         <option value="easy">쉽게</option>
-        <option value="normal">조금 높게</option>
+        <option value="normal" selected>조금 높게</option>
         <option value="hard">최대한 높게</option>
       </select
       <label> 부르려면... </label>
