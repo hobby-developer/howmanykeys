@@ -31,18 +31,21 @@ h2{
   background-color: #F9F9F9;
   margin-left: 50px;
   margin-right: 50px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 h3{
   margin-top: 0px;
-  font-size: 60px;
+  font-size: 2rem;
   font-weight: bold;
 }
 
 select, button{
   font-family: 'Noto Sans KR', sans-serif;
   vertical-align: text-bottom;
+  box-sizing: border-box;
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
 }
 select{
   border-radius: 0px;
@@ -50,6 +53,7 @@ select{
   border-width: 3px;
   border-color: #E9E9E9;
   font-size: 1.5rem;
+  height: 2.5rem;
 }
 button{
   border-radius: 10px;
@@ -61,7 +65,7 @@ button{
 
 
 #yourmaxnote{
-  font-size: 80px;
+  font-size: 4rem;
   font-weight: bold;
 }
 #querykeycompensate{
@@ -70,18 +74,26 @@ button{
   margin-bottom: 0px;
 }
 
+
 #querykey{
-  font-size: 100px;
+  font-size: 4rem;
   font-weight: bold;
   margin-top:20px;
   margin-bottom: 0px;
 }
 
 #queryroot{
-  font-size: 70px;
+  font-size: 3rem;
   font-weight: bold;
   color: #909090;
   margin-top : 0px;
+}
+
+#availableSongList{
+  font-size: 1.5rem;
+  color: #404040;
+  text-indent: 0px;
+  padding: 0px;
 }
 
 #requestSong{
@@ -90,7 +102,7 @@ button{
 
 #info{
   text-align: center;
-  font-size : 20px;
+  font-size : 1.5rem;
   color: #A0FFE0;
 }
 
