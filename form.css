@@ -5,19 +5,19 @@
  * Do NOT use SRI with dynamically generated files! More information: https://www.jsdelivr.com/using-sri-with-dynamic-files
  */
 .autoComplete_wrapper {
-    display: inline-block;
+    /*display: inline-block;*/
     position: relative
 }
 
 .autoComplete_wrapper>input {
-    width: 500rem;
-    max-width: 33VW;
-    min-width: 27rem;
-    height:4.5rem;
+    flex-grow: 1;
+    width:10px;
+    min-width: 20rem;
+    height:5rem;
     padding-left: 10px;
     font-size: 3rem;
     font-family: 'Noto Sans KR', sans-serif;
-    vertical-align: text-bottom;
+    vertical-align: baseline;
     color: #545454;
     border: 3px solid #E9E9E9;
     outline: 0;
@@ -88,10 +88,10 @@
     background-color: rgba(123,123,123,.1)
 }
 
-@media only screen and (max-width: 600px) {
+/*@media only screen and (max-width: 600px) {
     .autoComplete_wrapper>input {
-        width:27rem
+        width:24rem
     }
-}
+}*/
 
 /*# sourceMappingURL=/sm/38debd88dbaf12078724075dd58d53e5259e5e982a7072de58f4a96dab354ff8.map */

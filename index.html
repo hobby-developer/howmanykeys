@@ -20,7 +20,7 @@
   <div class="card" id="referenceSelect" margin-bottom="150px">
     <h3>1. 최고음 파악</h3>
     <form onchange="referenceSelected();  updateAvailableSongs();  querySongSelected();">
-      <span class='inline'>
+      <span class='inline flexform'>
         <label>나는 </label>
         <input id="refSong" name="refsong" type="search" dir="ltr" spellcheck=false autocorrect="off" autocomplete="off" autocapitalize="off" tabindex="1">
         <label> 을 </label>
@@ -46,8 +46,7 @@
       <span id="refpostlyrics" class="lyrics"></span>
     </p>
     <p class="note">
-      ※TJ 노래방 기준입니다<br>
-      ※가성부와 애드리브는 제외한 결과입니다<br>
+      ※TJ 노래방 기준이며, 가성부와 애드리브는 제외한 결과입니다<br><br>
       ※주의! 최고음은 노래방기계에서 표시되는 키 (으뜸음) 가 아닙니다!<br> 아래 STEP 2 에서 여러분이 부르고 싶은 노래의 키를 확인하세요.
     </p>
   </div>
@@ -55,7 +54,7 @@
   <div class="card" id="querySelect" hidden=true>
     <h3>2. 부를 노래의 키 계산</h3>
     <form>
-      <span class='inline'>
+      <span class='inline flexform'>
         <input id="querySong" name="querySong" type="search" dir="ltr" spellcheck=false autocorrect="off" autocomplete="off" autocapitalize="off" tabindex="1">
         <label> 를 </label>
       </span>
@@ -108,5 +107,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.6/dist/autoComplete.min.js"></script>
 <script src="script.js"></script>
+
 
 </html>
