@@ -36,7 +36,7 @@ async function fetchSongs() {
 function initializeSongForm(selector, selectedCallback) {
   var AC = new autoComplete({
     selector: selector,
-    placeHolder: "노래 제목 혹은 가수를 입력하세요",
+    placeHolder: "노래 제목 혹은 가수 검색",
     data: {
       src: songlist,
       keys: ["fullname"]

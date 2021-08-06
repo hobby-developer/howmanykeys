@@ -10,15 +10,15 @@
 }
 
 .autoComplete_wrapper>input {
-    width: 434px;
-    /*height: 40px;*/
-    height:2.5rem;
+    width: 500rem;
+    max-width: 33VW;
+    min-width: 27rem;
+    height:4.5rem;
     padding-left: 10px;
-    font-size: 1.5rem;
+    font-size: 3rem;
     font-family: 'Noto Sans KR', sans-serif;
     vertical-align: text-bottom;
     color: #545454;
-    /*border-radius: 4px;*/
     border: 3px solid #E9E9E9;
     outline: 0;
     box-sizing: border-box;
@@ -90,7 +90,7 @@
 
 @media only screen and (max-width: 600px) {
     .autoComplete_wrapper>input {
-        width:18rem
+        width:27rem
     }
 }
 

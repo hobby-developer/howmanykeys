@@ -1,25 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
 
+html {
+  font-size: 62.5%;
+}
+
 body{
   background-color: #60EAC0;
   font-family: 'Noto Sans KR', sans-serif;
-  font-size : 2rem;
+  font-size : 3rem;
   margin : 0px;
   padding: 0px;
+  word-break: keep-all;
+}
+.inline{
+  white-space: nowrap;
+  word-break: keep-all;
 }
 h1{
   font-family: 'Do Hyeon', sans-serif;
   text-align: center;
-  font-size: 150px;
+  font-size: 13rem;
   color: white;
   margin-bottom: 20px;
 }
 h2{
   text-align: center;
   font-weight: normal;
-  font-size: 2rem;
-  color: #F0F0F0;
+  font-size: 3rem;
+  color: #B0FFF0;
   margin-bottom: 100px;
 }
 
@@ -29,14 +38,15 @@ h2{
   padding:20px;
   text-align: center;
   background-color: #F9F9F9;
-  margin-left: 50px;
-  margin-right: 50px;
-  margin-bottom: 50px;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  margin-bottom: 4rem;
 }
 
 h3{
   margin-top: 0px;
-  font-size: 2rem;
+  font-size: 3rem;
+  color: #808080;
   font-weight: bold;
 }
 
@@ -44,16 +54,16 @@ select, button{
   font-family: 'Noto Sans KR', sans-serif;
   vertical-align: text-bottom;
   box-sizing: border-box;
--moz-box-sizing: border-box;
--webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
 select{
   border-radius: 0px;
   background-color: white;
   border-width: 3px;
   border-color: #E9E9E9;
-  font-size: 1.5rem;
-  height: 2.5rem;
+  font-size: 3rem;
+  height: 4.5rem;
 }
 button{
   border-radius: 10px;
@@ -62,28 +72,30 @@ button{
   background-color: #50DAB0;
   color : white;
 }
-
+ul{
+  padding-left: 0px;
+}
 
 #yourmaxnote{
-  font-size: 4rem;
+  font-size: 6rem;
   font-weight: bold;
 }
 #querykeycompensate{
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #FF6060;
   margin-bottom: 0px;
 }
 
 
 #querykey{
-  font-size: 4rem;
+  font-size: 6rem;
   font-weight: bold;
   margin-top:20px;
   margin-bottom: 0px;
 }
 
 #queryaltkey{
-  font-size: 2.5rem;
+  font-size: 4rem;
   font-weight: bold;
   margin-top:20px;
   margin-bottom: 0px;
@@ -97,14 +109,14 @@ button{
 }
 
 #availableSongList{
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #404040;
   text-indent: 0px;
   padding: 0px;
 }
 
 #requestSong{
-  font-size: 1.1rem;
+  font-size: 1.5rem;
 }
 
 #info{
@@ -114,16 +126,45 @@ button{
 }
 
 .note {
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: #A0A0A0;
 }
 
 .lyrics{
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #606060;
 }
 
 .lyrics_highlight{
-  font-size: 3rem;
+  font-size: 4rem;
   color: #FF6060;
+}
+
+
+
+@media only screen and (min-width: 1800px) {
+  html{
+    font-size: 75%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  html{
+      font-size: 56.25%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  html{
+    font-size: 50%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  html{
+    font-size: 1.8VW;
+  }
+  h1{
+    font-size: 20VW;
+  }
 }

@@ -1,97 +1,112 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <head>
   <meta charset="utf-8">
   <title>몇키낮추지?</title>
-  <link rel = "stylesheet" href="style.css">
-  <link rel = "stylesheet" href="form.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="form.css">
 </head>
 
 <body>
-  <h1>몇키낮추지?</h1>
+  <h1><span class='inline'>몇키낮추지?</span></h1>
   <h2>노래방 조옮김 계산기</h2>
 
-  <div class = "card" id = "referenceSelect" margin-bottom = "150px">
-  <form onchange = "referenceSelected();  updateAvailableSongs();  querySongSelected();">
-    <label>나는 </label>
-    <input id="refSong" name="refsong" type="search" dir="ltr" spellcheck=false autocorrect="off" autocomplete="off" autocapitalize="off" tabindex="1">
-    <label> 을 </label>
-    <select id="refdifficulty" name="refdifficulty">
-      <option value="easy">쉽게</option>
-      <option value="normal">조금 힘겹게</option>
-      <option value="hard">간신히</option>
-    </select>
-    <label> 부를 수 있어요</label>
-    <!-- <input type="submit"> -->
-  </form>
-  </div>
-
-  <div class = "card" id = "maxnoteindicate" hidden = true>
-    <p> 그렇다면 당신의 최고음은...</p>
-    <p id = "yourmaxnote">? (?)</p>
-    <p>가사 :
-      <span id = "refprelyrics" class = "lyrics"></span>
-      <span id = "refmaxlyrics" class = "lyrics_highlight"></span>
-      <span id = "refpostlyrics" class = "lyrics"></span>
-    </p>
-    <p class = "note">※TJ 노래방 기준입니다<br>※가성부와 애드리브는 제외한 결과입니다<br>※주의! 최고음은 노래방기계에서 표시되는 키 (으뜸음) 가 아닙니다!<br> 아래 계산기에서 여러분이 부르고 싶은 노래의 키를 확인하세요.</p>
-  </div>
-
-  <div class = "card" id = "querySelect" hidden = true>
-    <form>
-      <input id="querySong" name="querySong"  type="search" dir="ltr" spellcheck=false autocorrect="off" autocomplete="off" autocapitalize="off" tabindex="1">
-      <label> 를 </label>
-      <select id="querydifficulty" name="querydifficulty" onchange = "querySongSelected();">
-        <option value="easy">쉽게</option>
-        <option value="normal" selected>조금 높게</option>
-        <option value="hard">최대한 높게</option>
-      </select
-      <label> 부르려면... </label>
+  <div class="card" id="referenceSelect" margin-bottom="150px">
+    <h3>1. 최고음 파악</h3>
+    <form onchange="referenceSelected();  updateAvailableSongs();  querySongSelected();">
+      <span class='inline'>
+        <label>나는 </label>
+        <input id="refSong" name="refsong" type="search" dir="ltr" spellcheck=false autocorrect="off" autocomplete="off" autocapitalize="off" tabindex="1">
+        <label> 을 </label>
+      </span>
+      <span class='inline'>
+        <select id="refdifficulty" name="refdifficulty">
+          <option value="easy">쉽게</option>
+          <option value="normal">조금 힘겹게</option>
+          <option value="hard">간신히</option>
+        </select>
+        <label> 부를 수 있어요</label>
+      </span>
       <!-- <input type="submit"> -->
     </form>
-    <p id = "querykeycompensate" hidden>고음 빈도가 높아요! ?키 보정</p>
-    <p id = "querykey">?키</p>
-    <p id = "queryaltkey" hidden>?키</p>
-    <p id = "queryroot">(?)</p>
+  </div>
+
+  <div class="card" id="maxnoteindicate" hidden=true>
+    <p> 그렇다면 당신의 최고음은...</p>
+    <p id="yourmaxnote">? (?)</p>
     <p>가사 :
-      <span id = "queryprelyrics" class = "lyrics"></span>
-      <span id = "querymaxlyrics" class = "lyrics_highlight"></span>
-      <span id = "querypostlyrics" class = "lyrics"></span>
+      <span id="refprelyrics" class="lyrics"></span>
+      <span id="refmaxlyrics" class="lyrics_highlight"></span>
+      <span id="refpostlyrics" class="lyrics"></span>
+    </p>
+    <p class="note">
+      ※TJ 노래방 기준입니다<br>
+      ※가성부와 애드리브는 제외한 결과입니다<br>
+      ※주의! 최고음은 노래방기계에서 표시되는 키 (으뜸음) 가 아닙니다!<br> 아래 STEP 2 에서 여러분이 부르고 싶은 노래의 키를 확인하세요.
     </p>
   </div>
-  <div class = "card" id = "availableSongs" hidden = true>
-    <h3>원키로 도전해 볼 수 있는 노래들</h3>
-    <ol id = "availableSongList"></ol>
+
+  <div class="card" id="querySelect" hidden=true>
+    <h3>2. 부를 노래의 키 계산</h3>
+    <form>
+      <span class='inline'>
+        <input id="querySong" name="querySong" type="search" dir="ltr" spellcheck=false autocorrect="off" autocomplete="off" autocapitalize="off" tabindex="1">
+        <label> 를 </label>
+      </span>
+      <span class='inline'>
+        <select id="querydifficulty" name="querydifficulty" onchange="querySongSelected();">
+          <option value="easy">쉽게</option>
+          <option value="normal" selected>조금 높게</option>
+          <option value="hard">최대한 높게</option>
+        </select <label> 부르려면... </label>
+      </span>
+      <!-- <input type="submit"> -->
+    </form>
+    <p id="querykeycompensate" hidden>고음 빈도가 높아요! ?키 보정</p>
+    <p id="querykey">?키</p>
+    <p id="queryaltkey" hidden>?키</p>
+    <p id="queryroot">(?)</p>
+    <p>가사 :
+      <span id="queryprelyrics" class="lyrics"></span>
+      <span id="querymaxlyrics" class="lyrics_highlight"></span>
+      <span id="querypostlyrics" class="lyrics"></span>
+    </p>
   </div>
-  <div class = "card" id = "askdeveloper" hidden>
+  <div class="card" id="availableSongs" hidden=true>
+    <h3>원키로 도전할 만한 노래들</h3>
+    <ol id="availableSongList"></ol>
+  </div>
+  <div class="card" id="askdeveloper" hidden>
     <p>
       개발자에게 하고 싶은 말이 있어요!
-      <button
-      type = "button"
-      style= "font-size : 2rem;"
-      onclick = "document.location = 'https://forms.gle/BNrBcTvMjAVhemjU8'">
-      개발자 피드백 폼
+      <button type="button" style="font-size : 2rem;" onclick="document.location = 'https://forms.gle/BNrBcTvMjAVhemjU8'">
+        개발자 피드백 폼
       </button>
     </p>
   </div>
 
-  <div id = "info">
+  <div id="info">
     <p>
       2021 Hyeokjin Cho<br>
       CC BY-NC 2.0
     </p>
   </div>
 
-  <div id = "requestSong" hidden>
+  <div id="requestSong" hidden>
     <p>
       데이터베이스에 없는 노래에요ㅜㅜ<br>
-      <button type = "button" onclick = "document.location = 'https://forms.gle/BNrBcTvMjAVhemjU8'">개발자에게 노래 요청하기</button>
+      <button type="button" onclick="document.location = 'https://forms.gle/BNrBcTvMjAVhemjU8'">개발자에게 노래 요청하기</button>
     </p>
   </div>
 </body>
 
-<script src = "https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.6/dist/autoComplete.min.js"></script>
-<script src = "script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.6/dist/autoComplete.min.js"></script>
+<script src="script.js"></script>
 
 </html>
