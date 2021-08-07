@@ -206,5 +206,110 @@
     "maxnote": 11,
     "maxlyrics":["내가 너무도 사랑했던 사람","아",""],
     "compensation":-2
+  },
+  {
+    "name": "까만안경",
+    "artist": "이루",
+    "root": 11,
+    "maxnote": 8,
+    "maxlyrics":["이별","까지도 사","랑할 거에요"],
+    "compensation": 0
+  },
+  {
+    "name": "사랑이 식었다고 말해도 돼",
+    "artist": "먼데이키즈",
+    "root": 4,
+    "maxnote": 13,
+    "maxlyrics":["내가 좀 더 잘나서 성공할 때","쯤",""],
+    "compensation": -2
+  },
+  {
+    "name": "광화문에서(At Gwanghwamun)",
+    "artist": "규현",
+    "root": 3,
+    "maxnote": 8,
+    "maxlyrics":["비가 내리면 흠뻑 젖으며 오지 않는 너를 기다","려",""],
+    "compensation": -1
+  },
+  {
+    "name": "그날에 나는 맘이 편했을까",
+    "artist": "이예준",
+    "root": 10,
+    "maxnote": 17,
+    "maxlyrics":["처음부터 만나지 말았다면 행복했","을까",""],
+    "compensation": -1
+  },
+  {
+    "name": "첫눈처럼 너에게 가겠다(도깨비 OST)",
+    "artist": "에일리",
+    "root": 5,
+    "maxnote": 16,
+    "maxlyrics":["우습게 질투도 했던 니가 준 모든 순간","들","을"],
+    "compensation": 0
+  },
+  {
+    "name": "스토커",
+    "artist": "10cm",
+    "root": 1,
+    "maxnote": 6,
+    "maxlyrics":["내","가","이<span class='lyrics_highlight'>렇</span>게 사랑하는데 이<span class='lyrics_highlight'>렇</span>게 <span class='lyrics_highlight'>원</span>하는데"],
+    "compensation": -2
+  },
+  {
+    "name": "그대라는 사치",
+    "artist": "한동근",
+    "root": 6,
+    "maxnote": 11,
+    "maxlyrics":["믿을 수 ","없","어, 정말 믿을 수<span class='lyrics_highlight'>없</span>어"],
+    "compensation": 0
+  },
+  {
+    "name": "너였다면(또오해영 OST)",
+    "artist": "정승환",
+    "root": 2,
+    "maxnote": 9,
+    "maxlyrics":["얼마나 너를 원<strike>하고 (가성)</strike> ","있","는지"],
+    "compensation": -1
+  },
+  {
+    "name": "벌써 일년",
+    "artist": "브라운 아이즈",
+    "root": 6,
+    "maxnote": 12,
+    "maxlyrics":["일년 뒤에도 그 일년 뒤에","도"," 널 기다려"],
+    "compensation": 0
+  },
+  {
+    "name": "지나오다",
+    "artist": "닐로",
+    "root": 7,
+    "maxnote": 13,
+    "maxlyrics":["끝이라는 게 나 너무나 두려워서 다가가지도 ","못","하고"],
+    "compensation": 0
+  },
+  {
+    "name": "우리 왜 헤어져야 해",
+    "artist": "신예영",
+    "root": 7,
+    "maxnote": 17,
+    "maxlyrics":["내가 잘못 한 게 있다면 내가 미안하다 ","고",""],
+    "compensation": 0
+  },
+  {
+    "name": "One Love",
+    "artist": "mc the max",
+    "root": 7,
+    "maxnote": 13,
+    "maxlyrics":["너를 떠나보내고 후회하","고"," 있는 내게"],
+    "compensation": -1
+  },
+  {
+    "name": "너를 만나",
+    "artist": "폴킴",
+    "root": 0,
+    "maxnote": 7,
+    "maxlyrics":["우리 함께 걸어가기로 ","해",""],
+    "compensation": -1
   }
+
 ]
