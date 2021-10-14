@@ -310,6 +310,14 @@
     "maxnote": 7,
     "maxlyrics":["우리 함께 걸어가기로 ","해",""],
     "compensation": -1
+  },
+  {
+    "name": "찰나가 영원이 될 때",
+    "artist": "마크툽",
+    "root": 3,
+    "maxnote": 15,
+    "maxlyrics":["오색 빛 하늘 별 숲 사이로","너","라는 꽃이 피어나"],
+    "compensation": 0
   }
 
 ]
