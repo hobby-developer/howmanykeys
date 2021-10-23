@@ -90,7 +90,7 @@ function referenceSelected() {
 
   MXNT = refsong.maxnote + difficultyCorrection(refdifficulty) - 1; //normal is center
 
-  document.getElementById("yourmaxnote").innerHTML = note2text(MXNT);
+  document.getElementById("yourmaxnote").innerHTML = note2text(MXNT,'kor');
   document.getElementById("refprelyrics").innerHTML = refsong.maxlyrics[0];
   document.getElementById("refmaxlyrics").innerHTML = refsong.maxlyrics[1];
   document.getElementById("refpostlyrics").innerHTML = refsong.maxlyrics[2];
@@ -160,6 +160,8 @@ function querySongSelected() {
   document.getElementById("queryprelyrics").innerHTML = querysong.maxlyrics[0];
   document.getElementById("querymaxlyrics").innerHTML = querysong.maxlyrics[1];
   document.getElementById("querypostlyrics").innerHTML = querysong.maxlyrics[2];
+
+  document.getElementById("querynotechange").innerHTML = '원곡 최고음 : '+note2text(querysong.maxnote,'kor')+' → 보정 후 최고음 : '+note2text(querysong.maxnote+dkey,'kor');
 }
 
 
@@ -183,7 +185,7 @@ function difficultyCorrection(difficulty) {
   }
 }
 
-function note2text(note) {
+function note2text(note,option='all') {
   //0 is C4
   var key = note % 12;
   if (key < 0) {
@@ -217,7 +219,19 @@ function note2text(note) {
     '라#',
     '시'
   ];
-  return keylist[key] + ' (' + (octave + 2) + '옥 ' + keylistkor[key] + ')';
+  eng = keylist[key];
+  kor = (octave + 2) + '옥 ' + keylistkor[key];
+  switch (option){
+    case 'eng':
+      return eng;
+    case 'kor':
+      return kor;
+    case 'all':
+      return eng+' (' +kor+ ')';
+  }
+
+
+
 }
 
 function note2comptext(note) {
