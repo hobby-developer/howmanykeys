@@ -318,6 +318,22 @@
     "maxnote": 15,
     "maxlyrics":["오색 빛 하늘 별 숲 사이로","너","라는 꽃이 피어나"],
     "compensation": 0
+  },
+  {
+    "name": "도망가지마(에이틴OST)",
+    "artist": "모트",
+    "root": 0,
+    "maxnote": 9,
+    "maxlyrics":["길을 걷다 넘어지면 내가 찾아갈게 그렇게 있어주면","안","될까"],
+    "compensation": 0
+  },
+  {
+    "name": "내가 저지른 사랑",
+    "artist": "임창정",
+    "root": 7,
+    "maxnote": 11,
+    "maxlyrics":["<span class='lyrics_highlight'>지우고 버리고 비워 도</span>","어느새 가득 차버","린 내 사랑"],
+    "compensation": -1
   }
 
 ]
