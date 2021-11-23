@@ -21,6 +21,7 @@ body{
       display: flex;
       flex-direction: row;
       align-items: center;
+      justify-content: space-around;
 }
 h1{
   font-family: 'Do Hyeon', sans-serif;
