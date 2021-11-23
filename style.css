@@ -20,6 +20,7 @@ body{
 .flexform{
       display: flex;
       flex-direction: row;
+      align-items: center;
 }
 h1{
   font-family: 'Do Hyeon', sans-serif;
@@ -139,6 +140,8 @@ ul{
 .note {
     font-size: 1.2rem;
     color: #A0A0A0;
+    line-height: 2rem;
+    margin-bottom: 2rem;
 }
 
 .lyrics{

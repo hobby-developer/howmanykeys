@@ -19,9 +19,9 @@
 
   <div class="card" id="referenceSelect" margin-bottom="150px">
     <h3>1. 최고음 파악</h3>
-    <p>먼저, <b>내가 부를 수 있는 노래</b>를 입력하세요!<br>
-    <span class="note">이를 기반으로 최고음을 파악합니다.<br>
-    본인이 부를 수 있는 노래 중 최대한 높은 노래를 고르세요.</span></p>
+    <p>먼저, <b>내가 부를 수 있는 노래</b>를 입력하세요!</p>
+    <p class="note">이를 기반으로 최고음을 파악합니다.<br>
+    본인이 부를 수 있는 노래 중 최대한 높은 노래를 고르세요.</p>
     <form onchange="referenceSelected();  updateAvailableSongs();  querySongSelected();">
       <span class='inline flexform'>
         <label>나는 </label>
@@ -52,8 +52,12 @@
       ※TJ 노래방 기준이며, 가성부와 애드리브는 제외한 결과입니다<br><br>
       ※주의! 최고음은 노래방기계에서 표시되는 키 (으뜸음) 가 아닙니다!
     </p>
-    <p> 아래 <b>STEP 2</b> 에서 여러분이 <b>부르고 싶은 노래</b>의 키를 확인하세요!
-    </p>
+    <span class='flexform'>
+      <label>▼</label>
+      <p> 아래 <b>STEP 2</b> 에서 여러분이 <b>부르고 싶은 노래</b>의 키를 확인하세요</p>
+      <label>▼</label>
+    </span>
+
   </div>
 
   <div class="card" id="querySelect" hidden=true>
