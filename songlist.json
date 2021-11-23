@@ -382,6 +382,14 @@
     "maxnote": 8,
     "maxlyrics":["못 살고 못 죽고 그대","없","는 홍대 상수동"],
     "compensation": 0
+  },
+  {
+    "name": "늦은 밤 너의 집 앞 골목길에서",
+    "artist": "노을",
+    "root": 6,
+    "maxnote": 11,
+    "maxlyrics":["집으로 돌아오면서 한번 더","떠","오른 추억에"],
+    "compensation": 0
   }
 
 ]
