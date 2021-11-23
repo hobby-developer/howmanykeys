@@ -332,8 +332,56 @@
     "artist": "임창정",
     "root": 7,
     "maxnote": 11,
-    "maxlyrics":["<span class='lyrics_highlight'>지우고 버리고 비워 도</span>","어느새 가득 차버","린 내 사랑"],
+    "maxlyrics":["<span class='lyrics_highlight'>지우고 버리고 비워</span>도","어느새 가득 차버","린 내 사랑"],
     "compensation": -1
+  },
+  {
+    "name": "서툰 이별을 하려해 (Feat.전상근)",
+    "artist": "윤토벤",
+    "root": 10,
+    "maxnote": 12,
+    "maxlyrics":["많이 아프겠지만 이","제 정","말 헤어지려해"],
+    "compensation": 0
+  },
+  {
+    "name": "이 지금",
+    "artist": "아이유",
+    "root": 4,
+    "maxnote": 16,
+    "maxlyrics":["이 불꽃놀이는","끝","나지 않을 거야"],
+    "compensation": 0
+  },
+  {
+    "name": "unlucky",
+    "artist": "아이유",
+    "root": 10,
+    "maxnote": 15,
+    "maxlyrics":["There's no right 때론 모두가 외로운지","도","몰라"],
+    "compensation": -1
+  },
+  {
+    "name": "너랑 나",
+    "artist": "아이유",
+    "root": 1,
+    "maxnote": 18,
+    "maxlyrics":["너랑 나랑은 조금 남았지 몇날 몇실진 모르겠지","만",""],
+    "compensation": 0
+  },
+  {
+    "name": "애상",
+    "artist": "10cm",
+    "root": 4,
+    "maxnote": 18,
+    "maxlyrics":["<strike>정말 너 하나뿐야 (가성)</strike> 속","는 셈 치","고 한번 믿어봐"],
+    "compensation": 0
+  },
+  {
+    "name": "사랑은 은하수 다방에서",
+    "artist": "10cm",
+    "root": 11,
+    "maxnote": 8,
+    "maxlyrics":["못 살고 못 죽고 그대","없","는 홍대 상수동"],
+    "compensation": 0
   }
 
 ]
