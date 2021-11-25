@@ -109,9 +109,35 @@ function updateAvailableSongs() {
   songDOM.map(dom => dom.remove());
   songlist.map(
     function(song, i) {
-      if (MXNT + song.compensation > song.maxnote) {
-        songDOM[i] = document.createElement('ul');
-        songDOM[i].textContent = songlist[i].name + '-' + songlist[i].artist;
+      maxnotedifference = MXNT + song.compensation - song.maxnote;
+      if (maxnotedifference >= 0 && maxnotedifference <= 3) {
+        switch (maxnotedifference){
+          case 0:
+            difficultyscore = '★★★';
+            break;
+          case 1:
+            difficultyscore = '★★☆';
+            break;
+          case 2:
+            difficultyscore = '★☆☆';
+            break;
+          case 3:
+            difficultyscore = '☆☆☆'
+            break;
+        }
+        songDOM[i] = document.createElement('tr');
+
+        function addDOM(text){
+          dom = document.createElement('td');
+          dom.className = 'padded';
+          dom.innerText = text;
+          songDOM[i].appendChild(dom);
+        }
+
+        addDOM(difficultyscore);
+        addDOM(songlist[i].name);
+        addDOM(songlist[i].artist);
+
         availsonglist.appendChild(songDOM[i]);
       }
     }
@@ -161,7 +187,8 @@ function querySongSelected() {
   document.getElementById("querymaxlyrics").innerHTML = querysong.maxlyrics[1];
   document.getElementById("querypostlyrics").innerHTML = querysong.maxlyrics[2];
 
-  document.getElementById("querynotechange").innerHTML = '원곡 최고음 : '+note2text(querysong.maxnote,'kor')+' → 보정 후 최고음 : '+note2text(querysong.maxnote+dkey,'kor');
+  document.getElementById("queryOriginalNote").innerHTML = note2text(querysong.maxnote,'kor');
+  document.getElementById("queryChangedNote").innerHTML = note2text(querysong.maxnote+dkey,'kor');
 }
 
 

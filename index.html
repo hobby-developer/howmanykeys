@@ -85,11 +85,26 @@
       <span id="querymaxlyrics" class="lyrics_highlight"></span>
       <span id="querypostlyrics" class="lyrics"></span>
     </p>
-    <p id="querynotechange">원곡 최고음 : ? → 보정 후 최고음 : ?</p>
+    <span class = 'flexform' style='justify-content:space-evenly'>
+      <p>원곡 최고음<br>
+        <b><span id="queryOriginalNote">?</span></b>
+      </p>
+      <p><b> → </b></p>
+      <p>보정 후 최고음<br>
+        <b><span id="queryChangedNote">?</span></b>
+      </p>
+    </span>
   </div>
   <div class="card" id="availableSongs" hidden=true>
     <h3>원키로 도전할 만한 노래들</h3>
-    <ol id="availableSongList"></ol>
+    <p class='note'> ★★★ = 어려움 (내 음역대와 딱 맞음)<br>☆☆☆ = 쉬움 (내 음역대보다 3키 낮음)<br>★ 하나 당 한 키 차이에요<br>고음 빈도 보정이 적용된 결과입니다</p>
+    <span class = 'flexform'>
+      <table id="availableSongList">
+        <th class = 'padded'>난이도</th>
+        <th class = 'padded'>제목</th>
+        <th class = 'padded'>아티스트</th>
+      </table>
+    </span>
   </div>
   <div class="card" id="askdeveloper" hidden>
     <p>

@@ -124,8 +124,18 @@ ul{
 #availableSongList{
   font-size: 2rem;
   color: #404040;
-  text-indent: 0px;
-  padding: 0px;
+  /*text-indent: 15px;*/
+  margin : 1rem;
+  padding: 1rem;
+  text-align: left;
+  vertical-align: middle;
+}
+.padded{
+  border-bottom: 1px solid #F9F9F9;
+  border-top: 1px solid #F9F9F9;
+  border-collapse: collapse;
+  background-color: white;
+  padding:0.5rem;
 }
 
 #requestSong{
