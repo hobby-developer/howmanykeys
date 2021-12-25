@@ -390,6 +390,102 @@
     "maxnote": 11,
     "maxlyrics":["집으로 돌아오면서 한번 더","떠","오른 추억에"],
     "compensation": 0
+  },
+  {
+    "name": "시간을 거슬러",
+    "artist": "케이윌",
+    "root": 3,
+    "maxnote": 11,
+    "maxlyrics":["시간을","거","슬러 갈 순 없나요"],
+    "compensation": 0
+  },
+  {
+    "name": "시간을 거슬러",
+    "artist": "린",
+    "root": 2,
+    "maxnote": 14,
+    "maxlyrics":["시간을","거","슬러 갈 순 없나요"],
+    "compensation": 0
+  },
+  {
+    "name": "회전목마",
+    "artist": "sokodomo",
+    "root": 11,
+    "maxnote": 9,
+    "maxlyrics":["","빙","빙 돌아가는 회전목마처럼"],
+    "compensation": 0
+  },
+  {
+    "name": "리무진",
+    "artist": "BE'O",
+    "root": 4,
+    "maxnote": 7,
+    "maxlyrics":["그땐 갉아먹던 자존감이 식","사",""],
+    "compensation": 0
+  },
+  {
+    "name": "사랑은 늘 도망가",
+    "artist": "임영웅",
+    "root": 8,
+    "maxnote": 8,
+    "maxlyrics":["그리움이 쫓아 사랑","은"," 늘 도망가"],
+    "compensation": 0
+  },
+  {
+    "name": "만남은 쉽고 이별은 어려워",
+    "artist": "베이식",
+    "root": 2,
+    "maxnote": 9,
+    "maxlyrics":["그대가 날 떠나","간","단 말만 하지 않는다면"],
+    "compensation": 0
+  },
+  {
+    "name": "쉬어",
+    "artist": "아넌딜라이트,unofficialboyy,BE'O,지구인,Mudd the student",
+    "root": 9,
+    "maxnote": 4,
+    "maxlyrics":["","꿈","꾸<span class='lyrics_highlight'>러</span> 가자 좀 쉬어"],
+    "compensation": -2
+  },
+  {
+    "name": "너를 생각해",
+    "artist": "주시크",
+    "root": 10,
+    "maxnote": 12,
+    "maxlyrics":["이젠 내가 많이 잘할","게"," 너 혼자 울지 마"],
+    "compensation": -2
+  },
+  {
+    "name": "기다리다",
+    "artist": "윤하",
+    "root": 0,
+    "maxnote": 10,
+    "maxlyrics":["혼자인 게 ","더 편한 나라 또 어","제처<span class='lyrics_highlight'>럼 이</span>곳에<strike>서(가성)</strike>"],
+    "compensation": -2
+  },
+  {
+    "name": "다정히 내 이름을 부르면",
+    "artist": "경서예지,전건호",
+    "root": 1,
+    "maxnote": 16,
+    "maxlyrics":["우리 모든 날들과 별빛 아래 우리 그림자 제일로 ","특별","하다고"],
+    "compensation": -1
+  },
+  {
+    "name": "고백",
+    "artist": "멜로망스",
+    "root": 10,
+    "maxnote": 10,
+    "maxlyrics":["나를 봐줘요 내 말을 ","들","어봐 줘요"],
+    "compensation": 0
+  },
+  {
+    "name": "가시",
+    "artist": "버즈",
+    "root": 4,
+    "maxnote": 9,
+    "maxlyrics":["미치도록 너를 그리워했던 ","날"," 이제는 놓아줘"],
+    "compensation": -2
   }
 
 ]
