@@ -494,6 +494,14 @@
     "maxnote": 10,
     "maxlyrics":["내 눈엔 너만 빛나고 있어 yes","you",""],
     "compensation": 0
+  },
+  {
+    "name": "밤하늘의 별을",
+    "artist": "경서",
+    "root": 3,
+    "maxnote": 13,
+    "maxlyrics":["오직 내 눈에는 너만 보여 나를 아","껴","줘"],
+    "compensation": 0
   }
 
 ]
