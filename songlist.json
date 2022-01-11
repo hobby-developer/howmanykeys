@@ -486,6 +486,14 @@
     "maxnote": 9,
     "maxlyrics":["미치도록 너를 그리워했던 ","날"," 이제는 놓아줘"],
     "compensation": -2
+  },
+  {
+    "name": "밤하늘의 별을",
+    "artist": "임한별",
+    "root": 7,
+    "maxnote": 10,
+    "maxlyrics":["내 눈엔 너만 빛나고 있어 yes","you",""],
+    "compensation": 0
   }
 
 ]
