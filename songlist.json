@@ -502,6 +502,14 @@
     "maxnote": 13,
     "maxlyrics":["오직 내 눈에는 너만 보여 나를 아","껴","줘"],
     "compensation": 0
+  },
+  {
+    "name": "모든 날, 모든 순간",
+    "artist": "폴킴",
+    "root": 8,
+    "maxnote": 5,
+    "maxlyrics":["네 품속에 있<strike>는(가성)</strike> 지금 순간 순간이 영","원"," 했으면 해"],
+    "compensation": 0
   }
 
 ]
