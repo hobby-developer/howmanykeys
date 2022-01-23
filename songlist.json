@@ -510,6 +510,197 @@
     "maxnote": 5,
     "maxlyrics":["네 품속에 있<strike>는(가성)</strike> 지금 순간 순간이 영","원"," 했으면 해"],
     "compensation": 0
+  },
+  {
+    "name": "바람기억",
+    "artist": "나얼",
+    "root": 8,
+    "maxnote": 15,
+    "maxlyrics":["우리의 만남 우리의 이별 그 ","바","래진 기억에"],
+    "compensation": -1
+  },
+  {
+    "name": "행운을 빌어요",
+    "artist": "페퍼톤스",
+    "root": 11,
+    "maxnote": 6,
+    "maxlyrics":["눈물은 흘리지 않","을","게 Goodbye"],
+    "compensation": 0
+  },
+  {
+    "name": "좋다",
+    "artist": "데이브레이크",
+    "root": 2,
+    "maxnote": 9,
+    "maxlyrics":["왠지 서툴러 보이는 작은 두 글자로 나의 마음을 ","전할","게"],
+    "compensation": -1
+  },
+  {
+    "name": "널 사랑하지 않아",
+    "artist": "어반 자카파",
+    "root": 4,
+    "maxnote": 12,
+    "maxlyrics":["미안하다","는 말","도 용서해 달<span class='lyrics_highlight'>란 말</span>도 하고 싶지 않아"],
+    "compensation": 0
+  },
+  {
+    "name": "보고싶다",
+    "artist": "김범수",
+    "root": 4,
+    "maxnote": 9,
+    "maxlyrics":["미칠 듯 사랑했던 기억이 추억들이 너를 찾고 ","있","지만"],
+    "compensation": -1
+  },
+  {
+    "name": "잘 지내니 좀 어떠니",
+    "artist": "좋아서 하는 밴드",
+    "root": 2,
+    "maxnote": 13,
+    "maxlyrics":["이젠 너무 늦어","버","린 내 맘도 정말 아무렇지 않겠지만"],
+    "compensation": 0
+  },
+  {
+    "name": "너를 보내고",
+    "artist": "윤도현밴드",
+    "root": 0,
+    "maxnote": 7,
+    "maxlyrics":["난 왜 너 닮은 ","목","소리마저 가슴에 품고도"],
+    "compensation": 0
+  },
+  {
+    "name": "사랑 two",
+    "artist": "윤도현밴드",
+    "root": 2,
+    "maxnote": 7,
+    "maxlyrics":["널 만나","면 말","없이 있어 또 하나의 나처럼 편안했던 거야"],
+    "compensation": -2
+  },
+  {
+    "name": "호랑수월가",
+    "artist": "나래",
+    "root": 4,
+    "maxnote": 13,
+    "maxlyrics":["서로 ","가자"," 굽이굽이 쳐 <span class='lyrics_highlight'>가자</span>"],
+    "compensation": -1
+  },
+  {
+    "name": "호랑수월가",
+    "artist": "탑현",
+    "root": 0,
+    "maxnote": 12,
+    "maxlyrics":["달빛만이 흘러 바다가 ","되","고"],
+    "compensation": -1
+  },
+  {
+    "name": "토요일 밤이 좋아",
+    "artist": "로맨틱펀치",
+    "root": 0,
+    "maxnote": 7,
+    "maxlyrics":["월요일은 싫어 섹시한 ","그","녀가 있는 토<span class='lyrics_highlight'>요</span>일 밤이 나는 좋아"],
+    "compensation": -1
+  },
+  {
+    "name": "눈치채 줄래요",
+    "artist": "로맨틱펀치",
+    "root": 4,
+    "maxnote": 11,
+    "maxlyrics":["그대가 보고 싶어 미칠 것만 같","아",""],
+    "compensation": 0
+  },
+  {
+    "name": "사랑했나봐",
+    "artist": "윤도현",
+    "root": 6,
+    "maxnote": 9,
+    "maxlyrics":["행복한가봐 여전한 미소","는 자꾸","만 날 작아지게 만들어"],
+    "compensation": -1
+  },
+  {
+    "name": "서울의 달",
+    "artist": "김건모",
+    "root": 0,
+    "maxnote": 12,
+    "maxlyrics":["행복한가봐 여전한 미소","는 자꾸","만 날 작아지게 만들어"],
+    "compensation": -1
+  },
+  {
+    "name": "스물다섯, 스물하나",
+    "artist": "자우림",
+    "root": 0,
+    "maxnote": 12,
+    "maxlyrics":["","우-","영원할 줄 알았던 스물다섯 스물하나"],
+    "compensation": 0
+  },
+  {
+    "name": "말하는 대로",
+    "artist": "처진 달팽이",
+    "root": 5,
+    "maxnote": 10,
+    "maxlyrics":["될수 있다고 될수 있다고 그대 믿는","다","면"],
+    "compensation": 0
+  },
+  {
+    "name": "Maria",
+    "artist": "김아중",
+    "root": 11,
+    "maxnote": 15,
+    "maxlyrics":["마리","아"," 아베 마리아 거친 파도 따윈 상관없이"],
+    "compensation": -2
+  },
+  {
+    "name": "천년의 사랑",
+    "artist": "박완규",
+    "root": 7,
+    "maxnote": 12,
+    "maxlyrics":["천년이 가도 ","난"," 너를 잊을 수 없어"],
+    "compensation": -1
+  },
+  {
+    "name": "Tears",
+    "artist": "소찬휘",
+    "root": 0,
+    "maxnote": 19,
+    "maxlyrics":["잊지는 마 내 사랑을 너는 내 안에 있","어",""],
+    "compensation": 0
+  },
+  {
+    "name": "낭만고양이",
+    "artist": "체리필터",
+    "root": 10,
+    "maxnote": 17,
+    "maxlyrics":["(떠나가버린) 홀로 ","떠","나가 버린"],
+    "compensation": 0
+  },
+  {
+    "name": "오리날다",
+    "artist": "체리필터",
+    "root": 10,
+    "maxnote": 14,
+    "maxlyrics":["이렇게 멋진 날개를 ","펴"," 꿈을 꾸어요"],
+    "compensation": -1
+  },
+  {
+    "name": "비밀번호 486",
+    "artist": "윤하",
+    "root": 4,
+    "maxnote": 16,
+    "maxlyrics":["날 열어주는 단 하나뿐","인"," 비밀번호야"],
+    "compensation": 0
+  },
+  {
+    "name": "8282",
+    "artist": "다비치",
+    "root": 2,
+    "maxnote": 15,
+    "maxlyrics":["너를 향해 소리쳐 오오오 널 기다릴게","너",""],
+    "compensation": -1
+  },
+  {
+    "name": "눈의 꽃",
+    "artist": "박효신",
+    "root": 7,
+    "maxnote": 9,
+    "maxlyrics":["끝없이 내리는 새하얀 눈꽃<strike>들로(가성)</strike> 우리","걷","던 이 거리가"],
+    "compensation": -1
   }
-
 ]
