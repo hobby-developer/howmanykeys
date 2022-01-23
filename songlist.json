@@ -486,6 +486,14 @@
     "maxnote": 9,
     "maxlyrics":["미치도록 너를 그리워했던 ","날"," 이제는 놓아줘"],
     "compensation": -2
+  },
+  {
+    "name": "모든 날, 모든 순간",
+    "artist": "폴킴",
+    "root": 8,
+    "maxnote": 5,
+    "maxlyrics":["네 품속에 있<strike>는(가성)</strike> 지금 순간 순간이 영","원"," 했으면 해"],
+    "compensation": -2
   }
 
 ]
